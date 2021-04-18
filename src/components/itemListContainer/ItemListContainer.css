@@ -1,0 +1,32 @@
+.welcome{
+  background-color: black;
+  height: 50vh;
+}
+
+.principalTitle{
+  padding-top: 150px;
+  margin: 0px;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  color: #fff;
+  font-size: 80px;
+  letter-spacing: 5px;
+
+}
+
+.buttonClothing{
+  display: block;
+  margin: auto;
+  padding: 5px 20px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  font-size: 25px;
+  outline: none;
+}
+
+.buttonClothing:hover{
+  background-color: #fff;
+  color: #000;
+}

@@ -1,7 +1,8 @@
-import React from 'react';
-import '../App.css'
+import './navBar.css';
+import {CardWidget} from '../cardWidget/CardWidget';
 
-export default function NavBar(){
+
+export const NavBar = () => {
   return(
     <div className="navBar">
       <p className="nameShop">Streetwear</p>
@@ -11,7 +12,10 @@ export default function NavBar(){
         <li>Sneakers</li>
         <li>About</li>
         <li>FAQ</li>
+        <li>
+        <CardWidget />
+        </li>
       </ul>
     </div>
-  )
+  );
 }
