@@ -5,7 +5,7 @@ import {CardWidget} from '../cardWidget/CardWidget';
 export const NavBar = () => {
   return(
     <div className="navBar">
-      <p className="nameShop">Streetwear</p>
+      <p className="nameShop">CLYDE</p>
       <ul className="navBarPages">
         <li>Home</li>
         <li>Clothing</li>

@@ -4,21 +4,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ebf3eb;
 }
 
 .image{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
   margin: 0;
-  width: 1000px;
-  height: 600px;
-  border-radius: 10px;
+  width: 70vw;
+  height: 850px;
+  border-radius: 1px;
+  top: 450px;
+  right: 14.5%;
+  border: 5px solid #fff;
 }
 
 .right-arrow{
   position: absolute;
-  top: 50%;
-  right: 130px;
-  font-size: 3rem;
+  top: 100%;
+  right: 80px;
+  font-size: 4rem;
   color: #000;
   z-index: 10;
   cursor: pointer;
@@ -27,9 +34,9 @@
 
 .left-arrow{
   position: absolute;
-  top: 50%;
-  left: 130px;
-  font-size: 3rem;
+  top: 100%;
+  left: 80px;
+  font-size: 4rem;
   color: #000;
   z-index: 10;
   cursor: pointer;

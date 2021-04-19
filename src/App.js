@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <CarouselSlider slides={Carousel}/>
       <ItemListContainer />
+      <CarouselSlider slides={Carousel}/>
     </>
   );
 }
