@@ -1,0 +1,19 @@
+.stockDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+p.quantity{
+  font-size: 25px;
+  margin: 0px 20px;
+}
+
+.decrementButton{
+  margin-top: 10px;
+}
+
+.incrementButton{
+  margin-top: 10px; 
+}
