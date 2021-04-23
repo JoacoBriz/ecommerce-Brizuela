@@ -6,18 +6,17 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export const ItemCount = () => {
   const [stockQuantity, setStockQuantity] = useState(1);
-  const length = stockQuantity.length;
 
   const incrementQuantity = () => {
     if(stockQuantity <= 4){
-      setStockQuantity(stockQuantity === length - 1 ? 1 : stockQuantity + 1);
+      setStockQuantity(stockQuantity + 1);
     } else {
       alert('I havent more stock');
     }
   }
 
   const decrementQuantity = () => {
-    setStockQuantity(stockQuantity === length + 1 || stockQuantity === 1 ? 1 : stockQuantity - 1);
+    setStockQuantity(stockQuantity - 1);
   }
 
   return(
