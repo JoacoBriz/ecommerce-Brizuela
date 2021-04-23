@@ -1,6 +1,6 @@
 .slider{
   position: relative;
-  height: 100vh;
+  height: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@
   z-index: 100;
   margin: 0;
   width: 70vw;
-  height: 85vh;
+  height: 44vw;
   border-radius: 1px;
   top: 450px;
   right: 15%;
@@ -23,8 +23,8 @@
 
 .right-arrow{
   position: absolute;
-  top: 100%;
-  right: 80px;
+  top: 100vh;
+  right: 5vw;
   font-size: 4rem;
   color: #000;
   z-index: 10;
@@ -34,8 +34,8 @@
 
 .left-arrow{
   position: absolute;
-  top: 100%;
-  left: 80px;
+  top: 100vh;
+  left: 5vw;
   font-size: 4rem;
   color: #000;
   z-index: 10;

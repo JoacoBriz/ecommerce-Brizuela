@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './increment.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,13 +9,16 @@ export const ItemCount = () => {
   const length = stockQuantity.length;
 
   const incrementQuantity = () => {
-    setStockQuantity(stockQuantity === length - 1 ? 1 : stockQuantity + 1);
+    if(stockQuantity <= 4){
+      setStockQuantity(stockQuantity === length - 1 ? 1 : stockQuantity + 1);
+    } else {
+      alert('I havent more stock');
+    }
   }
 
   const decrementQuantity = () => {
     setStockQuantity(stockQuantity === length + 1 || stockQuantity === 1 ? 1 : stockQuantity - 1);
   }
-
 
   return(
     <div className='stockDiv'>

@@ -40,7 +40,7 @@ export const Products = () => {
     }
   ]
   function buying (){
-    alert('Thanks for buy');
+    alert(`Thanks for buy`);
   }
   return(
     <div className='productsContainer'>

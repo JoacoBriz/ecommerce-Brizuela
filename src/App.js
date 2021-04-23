@@ -1,8 +1,9 @@
-import {NavBar} from './components/navbar/NavBar';
-import {CarouselSlider} from './components/carousel/CarouselSlider';
+import { NavBar } from './components/navbar/NavBar';
+import { CarouselSlider } from './components/carousel/CarouselSlider';
 import { Carousel } from './components/carousel/Carousel';
-import {ItemListContainer} from './components/itemListContainer/ItemListContainer';
-import {Products} from './components/Product/Products';
+import { ItemListContainer } from './components/itemListContainer/ItemListContainer';
+import { Products } from './components/Product/Products';
+import { Footer } from './components/footer/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <ItemListContainer />
       <CarouselSlider slides={Carousel}/>
       <Products />
+      <Footer />
     </>
   );
 }
