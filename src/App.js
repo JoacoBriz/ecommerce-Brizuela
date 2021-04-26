@@ -4,6 +4,7 @@ import { Carousel } from './components/carousel/Carousel';
 import { MainIndex } from './components/main/MainIndex';
 import { ItemListContainer } from './components/itemList/ItemListContainer';
 import { Footer } from './components/footer/Footer';
+import { Newsletter } from './components/newsletter/Newsletter';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <MainIndex />
       <CarouselSlider slides={Carousel}/>
       <ItemListContainer />
+      <Newsletter />
       <Footer />
     </>
   );

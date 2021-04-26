@@ -1,0 +1,38 @@
+.newsletterContainer{
+  font-family: 'Heebo', sans-serif;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.newsletterContainer h3{
+  font-size: 40px;
+  margin: 0px;
+}
+
+.newsletterContainer p{
+  margin: 10px 0px 30px 0px;
+  font-size: 20px;
+}
+
+.newsletterContainer input{
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.newsletterContainer button{
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.newsletterContainer button:hover{
+  background-color: #000;
+  color: #fff;
+}
