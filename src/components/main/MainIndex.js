@@ -1,6 +1,6 @@
-import './ItemListContainer.css';
+import './mainStyles.css';
 
-export const ItemListContainer = () => {
+export const MainIndex = () => {
   return(
     <div className="welcome">
       <h1 className="principalTitle">Welcome</h1>

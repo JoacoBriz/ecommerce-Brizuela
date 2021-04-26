@@ -11,11 +11,12 @@ export const ItemCount = () => {
     if(stockQuantity <= 4){
       setStockQuantity(stockQuantity + 1);
     } else {
-      alert('I havent more stock');
+      alert('I havent had more stock');
     }
   }
 
   const decrementQuantity = () => {
+    if(stockQuantity >= 2)
     setStockQuantity(stockQuantity - 1);
   }
 
