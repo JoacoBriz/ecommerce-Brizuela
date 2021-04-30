@@ -1,5 +1,5 @@
 import './itemListStyles.css';
-import { Product } from './products/Product';
+import { Item } from './products/Item';
 
 export const ItemListContainer = () => {
   return(
@@ -8,7 +8,7 @@ export const ItemListContainer = () => {
         <h2 className='newTitle'>New Releases</h2>
         <p className='newDescription'>Collaborations and <span>exclusive</span> pieces</p>
       </div>
-      <Product />
+      <Item />
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import './ProductStyles.css';
 import { ItemCount } from './increment/ItemCount';
-import { ProductList } from './ProductList';
+import { ItemList } from './ItemList';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-export const Product = () => {
+export const Item = () => {
   const [products, setProducts] = useState([]);
 
   const getProducts = (products) => {
@@ -16,15 +17,10 @@ export const Product = () => {
 }
 
   useEffect(() => {
-    getProducts(ProductList).then(result => {
-        console.log(result)
-        setProducts(result);
+    getProducts(ItemList).then(result => {
+      setProducts(result);
     });
   }, []);
-
-  function buying (){
-    alert(`Thanks for buy`);
-  }
 
   return(
     <ul className='productList'>
@@ -34,7 +30,7 @@ export const Product = () => {
             <h3>{product.name}</h3>
             <p>{product.price}</p>
             <ItemCount />
-            <button onClick={buying} className='buttonBuy'>Buy</button>
+            <Link className='buttonBuy' to={`/ItemDetail/${product.id}`}>Buy</Link>
           </li>
       )}
     </ul>

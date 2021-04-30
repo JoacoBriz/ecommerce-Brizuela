@@ -30,3 +30,16 @@
 .navBarPages li{
   margin: 0px 15px;
 }
+
+.navLink{
+  text-decoration: none;
+  color: #fff;
+}
+.navLink:hover{
+  transition: 0.5s ease;
+  color: #ff6347;
+}
+
+.activeNavlink{
+  color: #ff6347;
+}

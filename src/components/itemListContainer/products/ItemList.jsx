@@ -7,7 +7,7 @@ import AirJordanXOFW from './img/AirJordanXOFW.jpg';
 import AdidasYeezy from './img/yeezy.jpg';
 import NikeX0W from './img/NikeXOW.jpg';
 
-export const ProductList =  [
+export const ItemList =  [
   {
     id: '1',
     image: SupremeSweatshirt,
