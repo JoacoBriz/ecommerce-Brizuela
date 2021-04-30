@@ -15,7 +15,13 @@ export const ItemDetail = () => {
       <img className='productImage' src={getProduct(productId).image} alt=''></img>
       <div className='productInfo'>
       <h1 className='productName'>{getProduct(productId).name}</h1>
-      <h2 className='productPrice'>{getProduct(productId).price}</h2>
+      <div className='productSize'>
+        <button className='size'>S</button>
+        <button className='size'>M</button>
+        <button className='size'>L</button>
+        <button className='size'>XL</button>
+      </div>
+      <p className='productPrice'>{getProduct(productId).price}</p>
       <button className='addCart'>Buy</button>
       </div>
     </main>

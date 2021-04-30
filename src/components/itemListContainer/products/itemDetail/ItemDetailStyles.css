@@ -1,18 +1,32 @@
 main{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fff;
 }
 
 .productInfo{
-  margin-left: 50px;
   width: 50%;
+  background-color: #f8f4f4;
+  margin: 100px 50px;
+  padding: 0px 50px;
+  box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
 }
 
 .productName{
-  margin-top: 100px;
+  font-size: 3vw;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
+
 
 .productPrice{
   text-align: left;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 .productImage{
@@ -30,14 +44,38 @@ main{
   font-size: 20px;
   padding: 5px 25px;
   margin-bottom: 10px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   text-decoration: none;
 }
 
 .addCart:hover{
-  background-color: #000;
-  color: #ff6347;
-  border-color: #ff6347;
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.productSize{
+  margin-top: 0px;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.size{
+  font-weight: 600;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #000;
+  border-radius: 2px;
+  font-size: 18px;
+  padding: 5px 10px;
+  margin: 10px 0px;
+  transition: 0.3s ease;
+  text-decoration: none;
   font-size: 20px;
-  padding: 5px 25px;
+}
+
+.size:hover{
+  background-color: #ff6347;
+  color: #fff;
 }

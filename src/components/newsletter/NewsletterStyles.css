@@ -10,7 +10,7 @@
 }
 
 .newsletterContainer p{
-  margin: 10px 0px 30px 0px;
+  margin: 10px 0px 10px 0px;
   font-size: 20px;
 }
 
@@ -49,4 +49,20 @@
   background-color: #000;
   color: #ff6347;
   border-color: #ff6347;
+}
+
+.typeClothes{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.typeClothes input {
+  width: 25px;
+  border-radius: 2px solid #000;
+  margin-top: 4px;
+}
+
+.typeClothes label{
+  font-weight: 600;
 }
