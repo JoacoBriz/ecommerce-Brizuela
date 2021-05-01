@@ -7,7 +7,7 @@ import { Footer } from './components/footer/Footer';
 import { Newsletter } from './components/newsletter/Newsletter';
 import { MainAbout } from './components/aboutPage/MainAbout'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { ItemDetail } from './components/itemListContainer/products/itemDetail/ItemDetail';
+import { ItemDetail } from './components/itemListContainer/products/ItemDetail';
 
 function App() {
   return (
