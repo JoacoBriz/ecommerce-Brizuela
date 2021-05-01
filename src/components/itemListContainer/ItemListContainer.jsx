@@ -1,5 +1,4 @@
 import './itemListStyles.css';
-import { ItemCount } from './increment/ItemCount';
 import { ItemList } from './ItemList';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -32,8 +31,7 @@ export const ItemListContainer = () => {
           <li className='product'>
           <img src={product.image} alt=''></img>
             <h3>{product.name}</h3>
-            <p>{product.price}</p>
-            <ItemCount />
+            <p>{`$ ${product.price}`}</p>
             <Link className='buttonBuy' to={`/ItemDetail/${product.id}`}>Buy</Link>
           </li>
       )}

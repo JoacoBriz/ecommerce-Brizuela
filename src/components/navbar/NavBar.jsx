@@ -6,17 +6,17 @@ import {CardWidget} from '../cardWidget/CardWidget'
 export const NavBar = () => {
   return(
     <div className="navBar">
-      <p className="nameShop">CLYDE</p>
+      <NavLink className="nameShop" exact to='/'>CLYDE</NavLink>
       <ul className="navBarPages">
         <li>
           <NavLink activeClassName='activeNavlink' className='navLink' exact to='/'>Home</NavLink>
         </li>
-        {/* <li>
-          <NavLink activeClassName='activeNavlink' className='navLink'>Clothing</NavLink>
+        <li>
+          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/ClothesSection'>Clothing</NavLink>
         </li>
         <li>
-          <NavLink activeClassName='activeNavlink' className='navLink'>Sneakers</NavLink>
-        </li> */}
+          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/SneakersSection'>Sneakers</NavLink>
+        </li>
         <li>
           <NavLink activeClassName='activeNavlink' className='navLink' to='/MainAbout'>About</NavLink>
         </li>

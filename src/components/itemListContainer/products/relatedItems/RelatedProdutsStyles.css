@@ -1,36 +1,3 @@
-.productsContainer{
-  font-family: 'Heebo', sans-serif;
-  margin-top: 420px;
-  margin-bottom: 150px;
-}
-
-.newCategory{
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  padding: 30px 0px;
-  margin-bottom: 40px;
-}
-
-.newTitle{
-  font-size: 4vw;
-  font-weight: 600;
-  letter-spacing: 5px;
-  margin: 0px;
-  top: 0px;
-}
-
-.newDescription{
-  font-size: 1.2vw;
-  margin: 5px;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
-
-.newDescription span{
-  font-weight: 600;
-}
-
 .productList{
   display: flex;
   flex-direction: row;
@@ -84,7 +51,7 @@
   border-radius: 2px;
   font-size: 20px;
   padding: 5px 25px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   transition: 0.5s ease;
   text-decoration: none;
 }

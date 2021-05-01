@@ -18,9 +18,11 @@
 }
 
 .buttonClothing {
+	text-decoration: none;
   letter-spacing: 1px;
   font-family: 'Heebo', sans-serif;
   display: block;
+	width: 120px;
   margin: auto;
   padding: 5px 20px;
   font-size: 30px;

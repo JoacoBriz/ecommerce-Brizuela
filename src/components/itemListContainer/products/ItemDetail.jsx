@@ -1,18 +1,20 @@
 import { useParams } from 'react-router'
 import { ItemList } from '../ItemList'
+import { RelatedProducts } from './relatedItems/RelatedProducts'
 import './ItemDetailStyles.css'
 
 export const ItemDetail = () => {
   const { productId } = useParams()
 
   function getProduct (productId) {
-    const productFilter = ItemList.find((product) => product.id === productId)
-    return productFilter
+    const productFind = ItemList.find((product) => product.id === productId)
+    return productFind
   }
-  
+
   return(
     <main>
-      <img className='productImage' src={getProduct(productId).image} alt=''></img>
+    <div className='productSigle'>
+    <img className='productImage' src={getProduct(productId).image} alt=''></img>
       <div className='productInfo'>
       <h1 className='productName'>{getProduct(productId).name}</h1>
       <div className='productSize'>
@@ -21,9 +23,14 @@ export const ItemDetail = () => {
         <button className='size'>L</button>
         <button className='size'>XL</button>
       </div>
-      <p className='productPrice'>{getProduct(productId).price}</p>
+      <p className='productPrice'>$ {getProduct(productId).price}</p>
       <button className='addCart'>Buy</button>
       </div>
+    </div>
+    <div className='newCategory'>
+      <h2 className='newTitle'>Related Products</h2>
+    </div>
+      <RelatedProducts />
     </main>
   )
 }

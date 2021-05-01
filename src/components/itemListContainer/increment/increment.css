@@ -1,13 +1,14 @@
 .stockDiv{
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 }
 
 p.quantity{
   font-size: 25px;
   margin: 0px 20px;
+  font-weight: 600;
 }
 
 .decrementButton{

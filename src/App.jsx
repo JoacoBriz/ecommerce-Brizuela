@@ -8,34 +8,41 @@ import { Newsletter } from './components/newsletter/Newsletter';
 import { MainAbout } from './components/aboutPage/MainAbout'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { ItemDetail } from './components/itemListContainer/products/ItemDetail';
+import { ClothesSection } from './components/clothesPage/ClothesSection'
+import { SneakersSection } from './components/sneakersPage/SneakersSection'
 
 function App() {
   return (
     <BrowserRouter>
+    <NavBar />
     <Switch>
 
       <Route exact path='/'>
-        <NavBar />
         <MainIndex />
         <CarouselSlider slides={Carousel}/>
         <ItemListContainer />
         <Newsletter />
-        <Footer />
       </Route>
 
       <Route path='/MainAbout'>
-        <NavBar />
         <MainAbout />
         <Newsletter />
-        <Footer />
       </Route>
 
       <Route path='/ItemDetail/:productId'>
-        <NavBar />
         <ItemDetail />
-        <Footer />
       </Route>
+
+      <Route path='/ClothesSection'>
+        <ClothesSection />
+      </Route>
+
+      <Route path='/SneakersSection'>
+        <SneakersSection />
+      </Route>
+
     </Switch>
+    <Footer />
     </BrowserRouter>
   );
 }

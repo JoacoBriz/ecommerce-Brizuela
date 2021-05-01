@@ -1,14 +1,11 @@
 import './mainStyles.css';
+import { Link } from 'react-router-dom'
 
 export const MainIndex = () => {
   return(
     <div className="welcome">
       <h1 className="principalTitle">Welcome</h1>
-      <button className="buttonClothing" onClick={goClothing}>Clothing</button>
+      <Link className="buttonClothing" to='/ClothesSection'>Clothing</Link>
     </div>
   )
-
-  function goClothing () {
-    alert('Welcome!');
-  }
 }
