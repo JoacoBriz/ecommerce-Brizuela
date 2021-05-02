@@ -8,11 +8,15 @@ import { useEffect } from 'react'
 export const ItemDetail = () => {
   const { productId } = useParams()
   const [product, setProduct] = useState([])
+  const [related, setRelated] = useState([])
 
   useEffect(() => {
     const productFind = ItemList.find((product) => product.id === productId)
     setProduct(productFind)
-  }, [productId]);
+
+    const relatedFind = ItemList.filter(product => product.category === productId)
+    setRelated(relatedFind)
+  }, [productId])
 
   return(
     <main>
@@ -33,7 +37,7 @@ export const ItemDetail = () => {
     <div className='newCategory'>
       <h2 className='newTitle'>Related Products</h2>
     </div>
-      <RelatedProducts />
+      <RelatedProducts props={related} />
     </main>
   )
 }

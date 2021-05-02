@@ -12,7 +12,7 @@ export const NavBar = () => {
           <NavLink activeClassName='activeNavlink' className='navLink' exact to='/'>Home</NavLink>
         </li>
         <li>
-          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/ClothesSection'>Clothing</NavLink>
+          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/ClothesSection'>Products</NavLink>
         </li>
         <li>
           <NavLink activeClassName='activeNavlink' className='navLink' exact to='/SneakersSection'>Sneakers</NavLink>
@@ -20,9 +20,6 @@ export const NavBar = () => {
         <li>
           <NavLink activeClassName='activeNavlink' className='navLink' to='/MainAbout'>About</NavLink>
         </li>
-        {/* <li>
-        <NavLink activeClassName='activeNavlink' className='navLink'>FAQ</NavLink>
-        </li> */}
         <li>
         <CardWidget />
         </li>

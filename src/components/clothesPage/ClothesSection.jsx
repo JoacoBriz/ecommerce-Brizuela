@@ -1,16 +1,23 @@
 import { ItemList } from '../itemListContainer/ItemList'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import './clothesPageStyles.css'
 
 export const ClothesSection = () => {
+  let { categoryId } = useParams()
   const [clothes, setClothes] = useState([]);
 
   useEffect(() => {
-    const ClothesProducts = ItemList.filter(product => product.category === 'Clothes')
-    setClothes(ClothesProducts);
-  }, [clothes]);
+    if(!categoryId) {
+      setClothes(ItemList);
+    } else {
+      let filterProducts = ItemList.filter((product) => product.category === categoryId)
+      setClothes(filterProducts)
+    }
+  }, [categoryId]);
+
+  console.log(categoryId)
 
   return(
     <main className='clothesPage'>
