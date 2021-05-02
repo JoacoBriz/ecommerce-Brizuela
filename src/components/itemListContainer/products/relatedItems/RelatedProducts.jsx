@@ -1,7 +1,7 @@
 import { ItemList } from '../../ItemList'
 import { Link } from 'react-router-dom'
 
-export const RelatedProducts = () => {
+export const RelatedProducts = (related) => {
   return(
     <ul className='productList'>
     {ItemList.map((product) => 

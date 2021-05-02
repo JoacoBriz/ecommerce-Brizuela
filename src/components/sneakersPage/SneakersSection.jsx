@@ -1,14 +1,22 @@
 import { ItemList } from '../itemListContainer/ItemList'
-import './SneakersStyles.css'
+import { useState } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import './SneakersStyles.css'
 
 export const SneakersSection = () => {
-  const SneakersProducts = ItemList.filter(product => product.category === 'Sneakers')
+
+  const [sneakers, setSneakers] = useState([]);
+
+  useEffect(() => {
+    const SneakersProducts = ItemList.filter(product => product.category === 'Sneakers')
+    setSneakers(SneakersProducts);
+  }, [sneakers]);
 
   return(
     <main className='sneakersPage'>
       <ul className='productList'>
-        {SneakersProducts.map((product) => 
+        {sneakers.map((product) => 
           <li className='product'>
             <img src={product.image} alt=''></img>
             <h3>{product.name}</h3>

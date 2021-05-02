@@ -1,14 +1,21 @@
 import { ItemList } from '../itemListContainer/ItemList'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useEffect } from 'react'
 import './clothesPageStyles.css'
 
 export const ClothesSection = () => {
-  const ClothesProducts = ItemList.filter(product => product.category === 'Clothes')
+  const [clothes, setClothes] = useState([]);
+
+  useEffect(() => {
+    const ClothesProducts = ItemList.filter(product => product.category === 'Clothes')
+    setClothes(ClothesProducts);
+  }, [clothes]);
 
   return(
     <main className='clothesPage'>
       <ul className='productList'>
-        {ClothesProducts.map((product) => 
+        {clothes.map((product) => 
           <li className='product'>
             <img src={product.image} alt=''></img>
             <h3>{product.name}</h3>
