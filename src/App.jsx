@@ -37,7 +37,7 @@ function App() {
         <ClothesSection />
       </Route>
 
-      <Route path='/SneakersSection'>
+      <Route path='/SneakersSection/:categoryId'>
         <SneakersSection />
       </Route>
 
