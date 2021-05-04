@@ -14,7 +14,8 @@ export const ItemDetailContainer = () => {
     const productFind = ItemList.find((product) => product.id === productId)
     setProduct(productFind)
 
-    const relatedFind = ItemList.filter((product) => product.category === productId.category)
+    // eslint-disable-next-line eqeqeq
+    const relatedFind = ItemList.filter((product) => product.category === productFind.category && product.id != productFind.id)
     setRelated(relatedFind)
   }, [productId])
 
