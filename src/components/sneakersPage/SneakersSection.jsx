@@ -22,7 +22,7 @@ export const SneakersSection = () => {
             <img src={product.image} alt=''></img>
             <h3>{product.name}</h3>
             <p>{`$ ${product.price}`}</p>
-            <Link className='buttonBuy' to={`/ItemDetail/${product.id}`}>Buy</Link>
+            <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>Buy</Link>
           </li>
         )}
       </ul>
