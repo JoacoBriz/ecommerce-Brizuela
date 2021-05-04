@@ -7,9 +7,9 @@ import { Footer } from './components/footer/Footer';
 import { Newsletter } from './components/newsletter/Newsletter';
 import { MainAbout } from './components/aboutPage/MainAbout'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { ItemDetail } from './components/itemListContainer/products/ItemDetail';
 import { ClothesSection } from './components/clothesPage/ClothesSection'
 import { SneakersSection } from './components/sneakersPage/SneakersSection'
+import { ItemDetailContainer } from './components/itemListContainer/products/ItemDetailContainer'
 
 function App() {
   return (
@@ -29,8 +29,8 @@ function App() {
         <Newsletter />
       </Route>
 
-      <Route path='/ItemDetail/:productId'>
-        <ItemDetail />
+      <Route path='/ItemDetailContainer/:productId'>
+        <ItemDetailContainer />
       </Route>
 
       <Route path='/ClothesSection/:categoryId'>
