@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto lo cree con React para el curso de React en Coder House.
 
 ## Available Scripts
 
