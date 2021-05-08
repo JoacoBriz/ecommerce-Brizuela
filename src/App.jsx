@@ -41,6 +41,10 @@ function App() {
         <SneakersSection />
       </Route>
 
+      <Route path='/cart'>
+        <SneakersSection />
+      </Route>
+
     </Switch>
     <Footer />
     </BrowserRouter>

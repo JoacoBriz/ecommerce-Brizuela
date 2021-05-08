@@ -1,6 +1,30 @@
 import './ItemDetailStyles.css'
+import { ItemCount } from './increment/ItemCount'
+import { useState } from 'react';
 
 export const ItemDetail = ({ props }) => {
+  const [stockQuantity, setStockQuantity] = useState(0);
+  const [buttonBuy, setButtonbuy] = useState(false);
+
+  const incrementQuantity = () => {
+    if(stockQuantity <= 4){
+      setStockQuantity(stockQuantity + 1);
+    } else {
+      alert('I havent had more stock');
+    }
+  }
+
+  const decrementQuantity = () => {
+    if(stockQuantity >= 2)
+    setStockQuantity(stockQuantity - 1);
+  }
+
+  const selectQuantity = () => {
+    if(stockQuantity >= 1){
+      setButtonbuy(true)
+    }
+  }
+
   return(
     <>
     <div className='productSigle'>
@@ -14,7 +38,17 @@ export const ItemDetail = ({ props }) => {
         <button className='size'>XL</button>
       </div>
       <p className='productPrice'>$ {props.price}</p>
-      <button className='addCart'>Buy</button>
+      {buttonBuy === false ? (
+      <ItemCount 
+        count={stockQuantity} 
+        increment={incrementQuantity} 
+        decrement={decrementQuantity}
+        onAdd={selectQuantity}
+      />
+      ) : (
+        <button className='addCart' >Finish Buy</button>
+      )
+      }  
       </div>
     </div>
     <div className='newCategory'>

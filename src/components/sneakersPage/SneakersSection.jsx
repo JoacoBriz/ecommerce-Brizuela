@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import './SneakersStyles.css'
 
 export const SneakersSection = () => {
-  let { categoryId } = useParams()
+  const { categoryId } = useParams()
 
   const [sneakers, setSneakers] = useState([]);
 
