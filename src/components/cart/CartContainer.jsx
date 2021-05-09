@@ -1,9 +1,9 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
 import {faShoppingBag} from '@fortawesome/free-solid-svg-icons';
 
-export const CardWidget = () => {
+export const CartContainer = () => {
   function push (){
-    alert("Este es tu Carrito");
+    alert("This is your Cart");
   }
   return(
     <FontAwesomeIcon onClick={push} icon={faShoppingBag} />

@@ -1,6 +1,6 @@
 import './navBar.css'
 import { NavLink } from 'react-router-dom';
-import {CardWidget} from '../cardWidget/CardWidget'
+import {CartContainer} from '../cart/CartContainer'
 
 
 export const NavBar = () => {
@@ -21,7 +21,7 @@ export const NavBar = () => {
           <NavLink activeClassName='activeNavlink' className='navLink' to='/MainAbout'>About</NavLink>
         </li>
         <li>
-        <CardWidget />
+        <CartContainer />
         </li>
       </ul>
     </div>

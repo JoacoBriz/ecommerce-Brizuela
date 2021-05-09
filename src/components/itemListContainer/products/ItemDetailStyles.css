@@ -82,3 +82,16 @@ main{
   background-color: #ff6347;
   color: #fff;
 }
+
+@media only screen and (max-width: 425px){
+  .productImage{
+    margin-top: 75px;
+    margin-bottom: 0px;
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .productInfo{
+    margin: 50px 50px;
+  }
+}
