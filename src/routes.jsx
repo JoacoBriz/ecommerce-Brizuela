@@ -31,7 +31,7 @@ export const Routes = () => {
           <Newsletter />
         </Route>
 
-        <Route path='/ItemDetail/:productId'>
+        <Route path='/ItemDetailContainer/:productId'>
           <ItemDetailContainer />
         </Route>
 
