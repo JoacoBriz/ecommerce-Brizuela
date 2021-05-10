@@ -10,10 +10,12 @@ import { MainIndex } from './components/main/MainIndex';
 import { NavBar } from './components/navbar/NavBar';
 import { Newsletter } from './components/newsletter/Newsletter';
 import { SneakersSection } from './components/sneakersPage/SneakersSection'
+import { ShoppingCart } from './context/cartContext'
 
 export const Routes = () => {
   return(
-    <Router>
+    <ShoppingCart>
+      <Router>
       <NavBar />
       <Switch>
 
@@ -29,7 +31,7 @@ export const Routes = () => {
           <Newsletter />
         </Route>
 
-        <Route path='/ItemDetailContainer/:productId'>
+        <Route path='/ItemDetail/:productId'>
           <ItemDetailContainer />
         </Route>
 
@@ -48,5 +50,6 @@ export const Routes = () => {
       </Switch>
       <Footer />
     </Router>
+  </ShoppingCart>
   )
 }

@@ -2,15 +2,12 @@ import { useParams } from 'react-router'
 import { ItemList } from '../ItemList'
 import { RelatedProducts } from './relatedItems/RelatedProducts'
 import { ItemDetail } from './ItemDetail'
-
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect } from 'react'
 
 export const ItemDetailContainer = () => {
   const { productId } = useParams()
   const [product, setProduct] = useState([])
   const [related, setRelated] = useState([])
-
-  const {addToCart} = useContext()
   
   useEffect(() => {
     const productFind = ItemList.find((product) => product.id === productId)
@@ -23,8 +20,7 @@ export const ItemDetailContainer = () => {
   return(
     <main>
       <ItemDetail 
-        props={product} 
-        onAdd={addToCart(product)}        
+        props={product}
       />
 
       <RelatedProducts

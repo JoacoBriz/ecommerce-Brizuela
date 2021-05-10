@@ -2,7 +2,7 @@ import './ItemDetailStyles.css'
 import { ItemCount } from './increment/ItemCount'
 import { useState } from 'react';
 
-export const ItemDetail = ({ props, onAdd }) => {
+export const ItemDetail = ({ props }) => {
   const [stockQuantity, setStockQuantity] = useState(0);
   const [buttonBuy, setButtonbuy] = useState(false);
 
@@ -46,7 +46,7 @@ export const ItemDetail = ({ props, onAdd }) => {
         selectQuantity={selectQuantity}
       />
       ) : (
-        <button className='addCart' onclick={onAdd} >Finish Buy</button>
+        <button className='addCart'>Finish Buy</button>
       )
       }  
       </div>
