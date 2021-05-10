@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-export const ItemCount = ({decrement, increment, count, onAdd}) => {
+export const ItemCount = ({decrement, increment, count, selectQuantity}) => {
   return(
     <div>
     <div className='stockDiv' >
@@ -11,7 +11,7 @@ export const ItemCount = ({decrement, increment, count, onAdd}) => {
       <p className='quantity'>{count}</p>
       <FontAwesomeIcon icon={faPlus} className='incrementButton' onClick={increment} />
     </div>
-      <button className='addCart' onClick={onAdd} >Add {count} to cart</button>
+      <button className='addCart' onClick={selectQuantity} >Add {count} to cart</button>
     </div>
   )
 }

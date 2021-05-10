@@ -1,11 +1,20 @@
+import './cartStyles.css'
+import { CartContext } from '../../context/cartContext';
+import { useState, useContext } from 'react'
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
-import {faShoppingBag} from '@fortawesome/free-solid-svg-icons';
 
 export const CartContainer = () => {
+  const cart = useContext (CartContext)
+  const [cartQuantity] = useState(cart.length)
+
   function push (){
     alert("This is your Cart");
   }
   return(
-    <FontAwesomeIcon onClick={push} icon={faShoppingBag} />
+    <>
+      <FontAwesomeIcon className='cartIcon' onClick={push} icon={faShoppingCart} />
+      <p className="cartQuantity">{cartQuantity}</p>
+    </>
   );
 }

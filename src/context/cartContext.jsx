@@ -1,8 +1,31 @@
-import { createContext } from 'react'
+/* eslint-disable react-hooks/rules-of-hooks */
+import { createContext, useEffect, useState } from 'react'
 
-//Creo el contexto
+
 export const CartContext = createContext([])
 
-//Tengo que exportar el proveedor para que de info a los hijos, y para eso tiene que estar bien arriba en el proyecto 
-//Entonces envolvemos la app completa para que pueda dar la info a todos los hijos
 export const CartProvider = CartContext.Provider
+
+export const shoppingCart = ( {children} ) => {
+  const [cart, setCart] = useState([])
+  const [quantity, setQuantity] = useState(0)
+
+  const addToCart = (item) => {
+    setCart([...cart, item])
+  }
+
+  useEffect( () => {
+      setQuantity(cart.length)
+  }, [cart])
+
+  const removeFromCart =(itemId) =>{
+    const newCart = cart.filter(item => item.id !== itemId)
+    setCart(newCart)
+  }
+
+  return(
+    <CartProvider value={ {cart, addToCart, removeFromCart, quantity} }>
+      {children}
+    </CartProvider>
+  )
+}
