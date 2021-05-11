@@ -4,11 +4,12 @@ font-size: 30px;
 
 .cartQuantity{
   position: absolute;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 800;
   color: #000;
-  z-index: 10000;
-  margin-left: 97.3%;
-  top: 16.5px;
+  z-index: 200;
+  margin-left: 0%;
+  right: 33px;
+  top: 15px;
   margin-top: 0px;
 }

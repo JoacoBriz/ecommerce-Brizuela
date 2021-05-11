@@ -17,7 +17,7 @@ export const CartContainer = () => {
   return(
     <>
       <FontAwesomeIcon className='cartIcon' onClick={push} icon={faShoppingCart} />
-      <p className="cartQuantity">{quantity.length}</p>
+      <p className="cartQuantity">{quantity}</p>
     </>
   );
 }

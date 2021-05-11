@@ -18,7 +18,7 @@ export const ClothesSection = () => {
   return(
     <main className='clothesPage'>
       <ul className='productList'>
-        {clothes?.map((product) => 
+        {clothes.map((product) => 
           <li className='product'>
             <img src={product?.image} alt=''></img>
             <h3>{product?.name}</h3>

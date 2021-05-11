@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { createContext, useEffect, useState } from 'react'
 
 export const CartContext = createContext()
@@ -15,6 +14,7 @@ export const ShoppingCart = ( {children} ) => {
 
   useEffect( () => {
       setQuantity(cart.length)
+      console.log(cart)
   }, [cart])
 
   const removeFromCart =(itemId) =>{
@@ -22,10 +22,13 @@ export const ShoppingCart = ( {children} ) => {
     setCart(newCart)
   }
 
+  const clearCart =() => { setCart([])}
+
   return(
     <CartProvider value={ {
     cart,
     quantity,
+    clearCart,
     addToCart,
     removeFromCart} }>
       {children}

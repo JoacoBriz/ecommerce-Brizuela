@@ -1,8 +1,9 @@
 import './ItemDetailStyles.css'
 import { ItemCount } from './increment/ItemCount'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CartContext } from '../../../context/cartContext';
 
-export const ItemDetail = ({ props }) => {
+export const ItemDetail = ({ props, product }) => {
   const [stockQuantity, setStockQuantity] = useState(0);
   const [buttonBuy, setButtonbuy] = useState(false);
 
@@ -25,6 +26,8 @@ export const ItemDetail = ({ props }) => {
     }
   }
 
+  const { addToCart } = useContext (CartContext)
+
   return(
     <>
     <div className='productSigle'>
@@ -46,7 +49,7 @@ export const ItemDetail = ({ props }) => {
         selectQuantity={selectQuantity}
       />
       ) : (
-        <button className='addCart'>Finish Buy</button>
+        <button className='addCart' onClick={() => addToCart(product)}>Finish Buy</button>
       )
       }  
       </div>

@@ -21,6 +21,7 @@ export const ItemDetailContainer = () => {
     <main>
       <ItemDetail 
         props={product}
+        product={product}
       />
 
       <RelatedProducts

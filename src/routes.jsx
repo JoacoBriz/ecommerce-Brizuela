@@ -43,10 +43,6 @@ export const Routes = () => {
           <SneakersSection />
         </Route>
 
-        <Route path='/cart'>
-          <SneakersSection />
-        </Route>
-
       </Switch>
       <Footer />
     </Router>
