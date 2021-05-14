@@ -1,15 +1,109 @@
-.cartIcon{
-font-size: 30px;
+.cleanCart{
+  text-align: center;
+  font-size: 30px;
 }
 
-.cartQuantity{
-  position: absolute;
-  font-size: 17px;
-  font-weight: 800;
+.cart{
+  font-family: 'Heebo', sans-serif;
+  background-color: #f8f4f4;
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  min-height: 741px;
+  max-height: 100%;
+  margin-top: 15%;
+}
+
+.cartProduct{
+  padding: 2%;
+  box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  width: 80%;
+  margin: 0px auto;
+  margin-bottom: 10%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cartInformation{
+  display: flex;
+  flex-direction: column;
+}
+
+.cartImage{
+  margin: 20px;
+  width: 200px;
+  height: 300px;
+}
+
+.cartName{
+  margin-bottom: 0%;
+  font-size: 40px;
+}
+.cartPrice{
+  margin-top: 0%;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.btnRemove{
+  font-size: 20px;
+  text-align: center;
+	text-decoration: none;
+  letter-spacing: 1px;
+	width: 120px;
+  padding: 5px 10px;
+  font-size: 15px;
+  outline: none;
+	color: #fff;
+	border: 3px solid #fff;
+  background-color: #000;
+  transition: 0.5s ease;
+  display: block;
+  margin: 0px;
+  font-size: 30px;
+}
+
+.btnClear{
+  text-align: center;
+	text-decoration: none;
+  letter-spacing: 1px;
+	width: 300px;
+  padding: 5px 10px;
+  font-size: 25px;
+  outline: none;
+	color: #fff;
+	border: 3px solid #fff;
+  background-color: #000;
+  transition: 0.5s ease;
+  display: block;
+  margin: 0px auto;
+  margin-top: 10%;
+  font-size: 30px;
+}
+
+.backToHome{
+  text-align: center;
+	text-decoration: none;
+  letter-spacing: 1px;
+  display: block;
+	width: 200px;
+  padding: 5px 10px;
+  font-size: 25px;
+  outline: none;
+	color: #fff;
+	border: 3px solid #fff;
+  background-color: #000;
+  transition: 0.5s ease;
+  display: block;
+  margin: 0px auto;
+}
+
+.backToHome:hover {
   color: #000;
-  z-index: 200;
-  margin-left: 0%;
-  right: 33px;
-  top: 15px;
-  margin-top: 0px;
+	background-color: transparent;
+  border: 2px solid #000;
 }

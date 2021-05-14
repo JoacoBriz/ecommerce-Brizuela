@@ -1,9 +1,15 @@
 import './navBar.css'
 import { NavLink } from 'react-router-dom';
-import {CartContainer} from '../cart/CartContainer'
+import { CartContext } from '../../context/CartContext';
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
+import {useContext} from 'react'
 
 
 export const NavBar = () => {
+  const contextCart = useContext (CartContext) 
+  const { quantity } = contextCart
+
   return(
     <div className="navBar">
       <NavLink className="nameShop" exact to='/'>CLYDE</NavLink>
@@ -21,7 +27,10 @@ export const NavBar = () => {
           <NavLink activeClassName='activeNavlink' className='navLink' to='/MainAbout'>About</NavLink>
         </li>
         <li>
-        <CartContainer />
+        <NavLink activeClassName='activeNavlink' className='navLink' to='/Cart'>
+          <FontAwesomeIcon icon={faShoppingCart} className='cartIcon'/>
+          <p className="cartQuantity">{quantity}</p>
+        </NavLink>
         </li>
       </ul>
     </div>

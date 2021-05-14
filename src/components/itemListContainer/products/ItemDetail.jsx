@@ -1,7 +1,7 @@
 import './ItemDetailStyles.css'
 import { ItemCount } from './increment/ItemCount'
 import { useState, useContext } from 'react';
-import { CartContext } from '../../../context/cartContext';
+import { CartContext } from '../../../context/CartContext';
 
 export const ItemDetail = ({ props, product }) => {
   const [stockQuantity, setStockQuantity] = useState(0);
@@ -26,7 +26,7 @@ export const ItemDetail = ({ props, product }) => {
     }
   }
 
-  const { addToCart } = useContext (CartContext)
+  const { addToCart } = useContext (CartContext) 
 
   return(
     <>
@@ -34,12 +34,6 @@ export const ItemDetail = ({ props, product }) => {
     <img className='productImage' src={props.image} alt=''></img>
       <div className='productInfo'>
       <h1 className='productName'>{props.name}</h1>
-      <div className='productSize'>
-        <button className='size'>S</button>
-        <button className='size'>M</button>
-        <button className='size'>L</button>
-        <button className='size'>XL</button>
-      </div>
       <p className='productPrice'>$ {props.price}</p>
       {buttonBuy === false ? (
       <ItemCount 

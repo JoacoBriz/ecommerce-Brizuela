@@ -20,10 +20,10 @@ export const ClothesSection = () => {
       <ul className='productList'>
         {clothes.map((product) => 
           <li className='product'>
-            <img src={product?.image} alt=''></img>
-            <h3>{product?.name}</h3>
-            <p>$ {product?.price}</p>
-            <Link className='buttonBuy' to={`/ItemDetail/${product?.id}`}>Buy</Link>
+            <img src={product.image} alt=''></img>
+            <h3>{product.name}</h3>
+            <p>$ {product.price}</p>
+            <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>Buy</Link>
           </li>
         )}
       </ul>

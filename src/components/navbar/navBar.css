@@ -47,3 +47,20 @@
 .activeNavlink{
   color: #ff6347;
 }
+
+.cartIcon{
+  font-size: 30px;
+  color: #fff;
+  }
+
+.cartQuantity{
+  position: absolute;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+  z-index: 200;
+  margin-left: 0%;
+  right: 33px;
+  top: 16px;
+  margin-top: 0px;
+}
