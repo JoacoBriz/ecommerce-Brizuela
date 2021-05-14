@@ -50,7 +50,6 @@
 }
 
 .btnRemove{
-  font-size: 20px;
   text-align: center;
 	text-decoration: none;
   letter-spacing: 1px;
@@ -71,18 +70,37 @@
   text-align: center;
 	text-decoration: none;
   letter-spacing: 1px;
-	width: 300px;
-  padding: 5px 10px;
-  font-size: 25px;
+	width: 200px;
+  padding: 0px 10px;
+  font-size: 15px;
   outline: none;
 	color: #fff;
 	border: 3px solid #fff;
   background-color: #000;
   transition: 0.5s ease;
   display: block;
-  margin: 0px auto;
-  margin-top: 10%;
+  margin: 0px;
   font-size: 30px;
+}
+
+.btnClear:hover {
+  color: #000;
+	background-color: transparent;
+  border: 2px solid #000;
+}
+
+.infoContainer{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.finalPrice{
+  font-weight: 600;
+  font-size: 30px;
+  margin-right: 3%;
 }
 
 .backToHome{

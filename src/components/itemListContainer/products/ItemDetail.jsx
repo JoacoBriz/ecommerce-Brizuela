@@ -7,6 +7,8 @@ export const ItemDetail = ({ props, product }) => {
   const [stockQuantity, setStockQuantity] = useState(0);
   const [buttonBuy, setButtonbuy] = useState(false);
 
+  const { addToCart } = useContext (CartContext)
+
   const incrementQuantity = () => {
     if(stockQuantity <= 4){
       setStockQuantity(stockQuantity + 1);
@@ -26,8 +28,6 @@ export const ItemDetail = ({ props, product }) => {
     }
   }
 
-  const { addToCart } = useContext (CartContext) 
-
   return(
     <>
     <div className='productSigle'>
@@ -43,7 +43,7 @@ export const ItemDetail = ({ props, product }) => {
         selectQuantity={selectQuantity}
       />
       ) : (
-        <button className='addCart' onClick={() => addToCart(product)}>Finish Buy</button>
+        <button className='addCart' onClick={() => addToCart(product)} >Finish Buy</button>
       )
       }  
       </div>

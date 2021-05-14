@@ -7,8 +7,7 @@ import {useContext} from 'react'
 
 
 export const NavBar = () => {
-  const contextCart = useContext (CartContext) 
-  const { quantity } = contextCart
+  const { quantity } = useContext (CartContext) 
 
   return(
     <div className="navBar">

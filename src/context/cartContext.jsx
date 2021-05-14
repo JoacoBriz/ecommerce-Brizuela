@@ -6,13 +6,15 @@ export const CartProvider = CartContext.Provider
 
 export const ShoppingCart = ( {children} ) => {
   const [cart, setCart] = useState([])
-  const [quantity] = useState(0)
+  const [quantity, setQuantity] = useState(0)
+  const [stock, setStock] = useState()
 
   const addToCart = (item) => {
     setCart([...cart, item])
   }
 
   useEffect( () => {
+      setQuantity(cart.length)
       console.log(cart)
   }, [cart])
 
@@ -23,10 +25,12 @@ export const ShoppingCart = ( {children} ) => {
 
   const clearCart =() => {setCart([])}
 
+
   return(
     <CartProvider value={{
     cart,
     quantity,
+    setStock,
     clearCart,
     addToCart,
     removeFromCart}}>

@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom'
 export const Cart = () => {
   const {cart, clearCart, removeFromCart, quantity} = useContext(CartContext)
 
+  const sumTotal = cart => {
+    let total = cart.reduce((t, product) => t += product.price , 0).toFixed(2);
+    return total
+}
   return(
     <main className='cart'>
       {cart.length > 0 ? (
@@ -16,7 +20,7 @@ export const Cart = () => {
               <h2 className='cartName'>{product.name}</h2>
               <p className='cartPrice'>${product.price}</p>
               <p className='cartQuantity'>{quantity.length}</p>
-              <button className='btnRemove ' onClick={() => removeFromCart(product.id)}>Delete</button>
+              <button className='btnRemove' onClick={() => removeFromCart(product.id)}>Delete</button>
               </div>
             </div>
         )
@@ -26,7 +30,12 @@ export const Cart = () => {
         <Link className='backToHome' to='/ClothesSection/clothes'>Back to Shop</Link>
         </Fragment>
       )}
-      {cart.length > 0 ? (<button onClick={clearCart} className="btnClear">Clean Cart</button>) : (<p></p>)}
+      {cart.length > 0 ? (
+        <div className='infoContainer'>
+        <button onClick={clearCart} className="btnClear">Clean Cart</button>
+        <p className='finalPrice'>Total price: $ {sumTotal(cart)}</p>
+        </div>
+        ) : (<p></p>)}
   </main>
   )
 }
