@@ -7,7 +7,7 @@ import {useContext} from 'react'
 
 
 export const NavBar = () => {
-  const { quantity } = useContext (CartContext) 
+  const { cart, quantity } = useContext (CartContext)
 
   return(
     <div className="navBar">
@@ -26,10 +26,12 @@ export const NavBar = () => {
           <NavLink activeClassName='activeNavlink' className='navLink' to='/MainAbout'>About</NavLink>
         </li>
         <li>
-        <NavLink activeClassName='activeNavlink' className='navLink' to='/Cart'>
+        {cart.length > 0 ? (
+          <NavLink activeClassName='activeNavlink' className='navLink' to='/Cart'>
           <FontAwesomeIcon icon={faShoppingCart} className='cartIcon'/>
-          <p className="cartQuantity">{quantity}</p>
+          <p className="cartQuantityAll">{quantity}</p>
         </NavLink>
+        ) : (<p></p>)}
         </li>
       </ul>
     </div>

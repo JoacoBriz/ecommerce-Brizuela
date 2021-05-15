@@ -31,6 +31,7 @@
 .cartInformation{
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .cartImage{
@@ -40,13 +41,17 @@
 }
 
 .cartName{
-  margin-bottom: 0%;
+  padding-bottom: 0%;
   font-size: 40px;
 }
 .cartPrice{
-  margin-top: 0%;
-  margin-bottom: 20px;
+  margin: 10px 0px;
   font-size: 40px;
+}
+
+.cartQuantity{
+  margin: 0px;
+font-size: 20px;
 }
 
 .btnRemove{

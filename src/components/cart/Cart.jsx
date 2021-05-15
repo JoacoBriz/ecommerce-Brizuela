@@ -10,6 +10,7 @@ export const Cart = () => {
     let total = cart.reduce((t, product) => t += product.price , 0).toFixed(2);
     return total
 }
+
   return(
     <main className='cart'>
       {cart.length > 0 ? (
@@ -17,23 +18,23 @@ export const Cart = () => {
             <div className='cartProduct'>
               <img className='cartImage' src={product.image} alt=""/>
               <div className='cartInformation'>
-              <h2 className='cartName'>{product.name}</h2>
-              <p className='cartPrice'>${product.price}</p>
-              <p className='cartQuantity'>{quantity.length}</p>
-              <button className='btnRemove' onClick={() => removeFromCart(product.id)}>Delete</button>
+                <h2 className='cartName'>{product.name}</h2>
+                <p className='cartQuantity'>Quantity: {quantity.id}</p>
+                <p className='cartPrice'>${product.price}</p>
+                <button className='btnRemove' onClick={() => removeFromCart(product.id)}>Delete</button>
               </div>
             </div>
         )
       ) : (
         <Fragment>
-        <p className='cleanCart'>There are no products in your cart</p>
-        <Link className='backToHome' to='/ClothesSection/clothes'>Back to Shop</Link>
+          <p className='cleanCart'>There are no products in your cart</p>
+          <Link className='backToHome' to='/ClothesSection/clothes'>Back to Shop</Link>
         </Fragment>
       )}
       {cart.length > 0 ? (
         <div className='infoContainer'>
-        <button onClick={clearCart} className="btnClear">Clean Cart</button>
-        <p className='finalPrice'>Total price: $ {sumTotal(cart)}</p>
+          <button onClick={clearCart} className="btnClear">Clean Cart</button>
+          <p className='finalPrice'>Total price: $ {sumTotal(cart)}</p>
         </div>
         ) : (<p></p>)}
   </main>
