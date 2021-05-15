@@ -4,7 +4,7 @@ import { Fragment, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 export const Cart = () => {
-  const {cart, clearCart, removeFromCart, quantity} = useContext(CartContext)
+  const {cart, clearCart, removeFromCart} = useContext(CartContext)
 
   const sumTotal = cart => {
     let total = cart.reduce((t, product) => t += product.price , 0).toFixed(2);
@@ -19,7 +19,6 @@ export const Cart = () => {
               <img className='cartImage' src={product.image} alt=""/>
               <div className='cartInformation'>
                 <h2 className='cartName'>{product.name}</h2>
-                <p className='cartQuantity'>Quantity: {quantity.id}</p>
                 <p className='cartPrice'>${product.price}</p>
                 <button className='btnRemove' onClick={() => removeFromCart(product.id)}>Delete</button>
               </div>
