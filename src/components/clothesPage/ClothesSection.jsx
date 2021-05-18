@@ -1,30 +1,43 @@
-import { ItemList } from '../itemListContainer/ItemList'
-import { Link, useParams } from 'react-router-dom'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import './clothesPageStyles.css'
+import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { getFirestore } from '../../firabase/indexFirebase'
+import './clothesStyles.css'
 
 export const ClothesSection = () => {
-  let { categoryId } = useParams()
-  const [clothes, setClothes] = useState([]);
+  const [clothes, setClothes] = useState([])
+  const [emptyCategory, setEmptyCategory] = useState(false)
 
-
-  useEffect(() => {
-      let filterProducts = ItemList.filter((product) => product.category.toLowerCase() === categoryId)
-      setClothes(filterProducts)
-  }, [categoryId]);
-
+  useEffect(
+    () => {
+      const db = getFirestore()
+      const itemCollection = db.collection('products')
+      const itemPerCategory = itemCollection.where('category', '==', 'clothes')
+      itemPerCategory.get().then(
+        (querySnapshot) => {
+          if(querySnapshot.size === 0) {
+            setEmptyCategory(true)
+          }
+          const result = (querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
+          setClothes(result)
+        }
+      )
+    }
+  )
 
   return(
     <main className='clothesPage'>
       <ul className='productList'>
-        {clothes.map((product) => 
+        {emptyCategory ? (
+          <p className='emptyCategory'>This category is empty</p>
+        ) : (
+          clothes.map((product) => 
           <li className='product'>
             <img src={product.image} alt=''></img>
             <h3>{product.name}</h3>
             <p>$ {product.price}</p>
             <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>Buy</Link>
           </li>
+        )
         )}
       </ul>
     </main>

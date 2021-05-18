@@ -40,11 +40,11 @@ export const Routes = () => {
           <ItemDetailContainer />
         </Route>
 
-        <Route path='/ClothesSection/:categoryId'>
+        <Route path='/ClothesSection/'>
           <ClothesSection />
         </Route>
 
-        <Route path='/SneakersSection/:categoryId'>
+        <Route path='/SneakersSection/'>
           <SneakersSection />
         </Route>
 

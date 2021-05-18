@@ -17,7 +17,7 @@ export const NavBar = () => {
           <NavLink activeClassName='activeNavlink' className='navLink' exact to='/'>Home</NavLink>
         </li>
         <li>
-          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/ClothesSection/clothes'>Products</NavLink>
+          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/ClothesSection/clothes'>Clothes</NavLink>
         </li>
         <li> 
           <NavLink activeClassName='activeNavlink' className='navLink' exact to='/SneakersSection/sneakers'>Sneakers</NavLink>

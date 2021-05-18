@@ -13,6 +13,8 @@ export const ItemListContainer = () => {
         return res(products)
       }, 1000)
     })
+
+    
 }
 
   useEffect(() => {

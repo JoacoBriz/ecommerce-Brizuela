@@ -1,31 +1,44 @@
-import { ItemList } from '../itemListContainer/ItemList'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import './SneakersStyles.css'
+import { Link } from 'react-router-dom'
+import { getFirestore } from '../../firabase/indexFirebase'
+import './sneakersStyles.css'
 
 export const SneakersSection = () => {
-  const { categoryId } = useParams()
+  const [sneakers, setSneakers] = useState([])
+  const [emptyCategory, setEmptyCategory] = useState(false)
 
-  const [sneakers, setSneakers] = useState([]);
-
-  useEffect(() => {
-    let filterProducts = ItemList.filter((product) => product.category.toLowerCase() === categoryId)
-    setSneakers(filterProducts)
-  }, [categoryId]);
+  useEffect(
+    () => {
+          const db = getFirestore()
+          const itemCollection = db.collection('products')
+          const itemPerCategory = itemCollection.where('category', '==', 'sneakers')
+          itemPerCategory.get().then(
+            (querySnapshot) => {
+              if(querySnapshot.size === 0) {
+                setEmptyCategory(true)
+              }
+              const result = (querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
+              setSneakers(result)
+          })
+  })
 
   return(
     <main className='sneakersPage'>
-      <ul className='productList'>
-        {sneakers.map((product) => 
-          <li className='product'>
-            <img src={product.image} alt=''></img>
-            <h3>{product.name}</h3>
-            <p>{`$ ${product.price}`}</p>
-            <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>Buy</Link>
-          </li>
-        )}
-      </ul>
+        <ul className='productList'>
+          {emptyCategory ? (
+            <p className='emptyCategory'>This category is empty</p>
+          ) :(
+            sneakers.map((product) =>
+            <li className='product'>
+              <img src={product.image} alt=''></img>
+              <h3>{product.name}</h3>
+              <p>{`$ ${product.price}`}</p>
+              <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>Buy</Link>
+            </li>
+          )
+          )}
+        </ul>
     </main>
   )
 } 
