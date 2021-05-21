@@ -21,7 +21,8 @@ useEffect(
         setClothes(result)
       }
     )
-})
+    console.log('clothes section => ', clothes)
+}, [clothes])
 
   return(
     <main className='clothesPage'>

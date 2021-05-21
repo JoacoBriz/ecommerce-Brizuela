@@ -21,7 +21,8 @@ export const SneakersSection = () => {
               const result = (querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
               setSneakers(result)
           })
-  })
+          console.log('sneakers section => ', sneakers)
+  }, [sneakers])
 
   return(
     <main className='sneakersPage'>

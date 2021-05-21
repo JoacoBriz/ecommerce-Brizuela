@@ -23,12 +23,10 @@ export const ShoppingCart = ( {children} ) => {
   }
 
   const isInCart = item => cart.find(product => product.id === item.id)
-  useEffect(()=> {
-    console.log(cart)
-  }, [cart])
 
-  useEffect( () => {
-      setQuantity(cart.length)
+  useEffect(()=> {
+    setQuantity(cart.length)
+    console.log('cart => ',cart)
   }, [cart])
 
   const removeFromCart =(itemId) =>{

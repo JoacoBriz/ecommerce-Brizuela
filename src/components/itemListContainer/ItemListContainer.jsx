@@ -16,7 +16,9 @@ export const ItemListContainer = () => {
               const result = (querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
               setProducts(result)
           })
+          console.log('products => ', products)
   })
+
   return(
     <div className='productsContainer'>
       <div className='newCategory'>
