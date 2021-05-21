@@ -7,7 +7,7 @@ export const Cart = () => {
   const {cart, clearCart, removeFromCart} = useContext(CartContext)
 
   const sumTotal = cart => {
-    let total = cart.reduce((t, product) => t += product.price , 0).toFixed(2);
+    let total = cart.reduce((t, product) => t += product.price*product.quantity, 0).toFixed(2);
     return total
 }
 
@@ -19,7 +19,8 @@ export const Cart = () => {
               <img className='cartImage' src={product.image} alt=""/>
               <div className='cartInformation'>
                 <h2 className='cartName'>{product.name}</h2>
-                <p className='cartPrice'>${product.price}</p>
+                <p className='cartPrice'>${product.price*product.quantity}</p>
+                <p className='cartPrice'>Quantity: {product.quantity}</p>
                 <button className='btnRemove' onClick={() => removeFromCart(product.id)}>Delete</button>
               </div>
             </div>

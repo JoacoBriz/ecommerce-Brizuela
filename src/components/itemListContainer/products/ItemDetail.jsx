@@ -3,27 +3,26 @@ import { ItemCount } from './increment/ItemCount'
 import { useState, useContext } from 'react';
 import { CartContext } from '../../../context/CartContext';
 
-export const ItemDetail = ({ props, product }) => {
-  const [stockQuantity, setStockQuantity] = useState(0);
-  const [buttonBuy, setButtonbuy] = useState(false);
-
-  const { addToCart } = useContext (CartContext)
+export const ItemDetail = ({ props }) => {
+  const [quantity, setQuantity] = useState(0)
+  const [buttonBuy, setButtonbuy] = useState(false)
+  const { addToCart } =  useContext(CartContext)
 
   const incrementQuantity = () => {
-    if(stockQuantity <= 4){
-      setStockQuantity(stockQuantity + 1);
+    if(quantity <= 4){
+      setQuantity(quantity + 1);
     } else {
       alert('I havent had more stock');
     }
   }
 
   const decrementQuantity = () => {
-    if(stockQuantity >= 2)
-    setStockQuantity(stockQuantity - 1);
+    if(quantity >= 2)
+    setQuantity(quantity - 1);
   }
 
   const selectQuantity = () => {
-    if(stockQuantity >= 1){
+    if(quantity >= 1){
       setButtonbuy(true)
     }
   }
@@ -37,15 +36,15 @@ export const ItemDetail = ({ props, product }) => {
       <p className='productPrice'>$ {props.price}</p>
       {buttonBuy === false ? (
       <ItemCount 
-        count={stockQuantity} 
-        increment={incrementQuantity} 
+        count={quantity}
+        increment={incrementQuantity}
         decrement={decrementQuantity}
         selectQuantity={selectQuantity}
       />
       ) : (
-        <button className='addCart' onClick={() => addToCart(product)} >Finish Buy</button>
+        <button className='addCart' onClick={() => addToCart(props, quantity)} >Finish Buy</button>
       )
-      }  
+      }
       </div>
     </div>
     <div className='newCategory'>

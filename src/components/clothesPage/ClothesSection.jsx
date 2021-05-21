@@ -7,22 +7,21 @@ export const ClothesSection = () => {
   const [clothes, setClothes] = useState([])
   const [emptyCategory, setEmptyCategory] = useState(false)
 
-  useEffect(
-    () => {
-      const db = getFirestore()
-      const itemCollection = db.collection('products')
-      const itemPerCategory = itemCollection.where('category', '==', 'clothes')
-      itemPerCategory.get().then(
-        (querySnapshot) => {
-          if(querySnapshot.size === 0) {
-            setEmptyCategory(true)
-          }
-          const result = (querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
-          setClothes(result)
+useEffect(
+  () => {
+    const db = getFirestore()
+    const itemCollection = db.collection('products')
+    const itemPerCategory = itemCollection.where('category', '==', 'clothes')
+    itemPerCategory.get().then(
+      (querySnapshot) => {
+        if(querySnapshot.size === 0) {
+          setEmptyCategory(true)
         }
-      )
-    }
-  )
+        const result = (querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
+        setClothes(result)
+      }
+    )
+})
 
   return(
     <main className='clothesPage'>
@@ -35,7 +34,7 @@ export const ClothesSection = () => {
             <img src={product.image} alt=''></img>
             <h3>{product.name}</h3>
             <p>$ {product.price}</p>
-            <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>Buy</Link>
+            <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>View More</Link>
           </li>
         )
         )}

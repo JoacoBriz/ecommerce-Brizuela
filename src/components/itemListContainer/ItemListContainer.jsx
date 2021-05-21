@@ -1,27 +1,22 @@
 import './itemListStyles.css';
-import { ItemList } from './ItemList';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getFirestore } from '../../firabase/indexFirebase'
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
-  const getProducts = (products) => {
-    return new Promise((res, rej) => {
-      setTimeout(() => {
-        return res(products)
-      }, 1000)
-    })
-
-    
-}
-
-  useEffect(() => {
-    getProducts(ItemList).then(result => {
-      setProducts(result);
-    });
-  }, []);
+  useEffect(
+    () => {
+          const db = getFirestore()
+          const itemCollection = db.collection('products')
+          itemCollection.get().then(
+            (querySnapshot) => {
+              const result = (querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
+              setProducts(result)
+          })
+  })
   return(
     <div className='productsContainer'>
       <div className='newCategory'>
