@@ -1,13 +1,10 @@
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { getFirestore } from '../../../../firabase/indexFirebase'
+import './RelatedProdutsStyles.css'
 
 export const RelatedProducts = ({ props }) => {
-  const [related, setRelated] = useState([])
-
   return(
     <ul className='productList'>
-    {related.map((product) => 
+    {props.map((product) => 
         <li className='product'>
           <img src={product.image} alt=''></img>
           <h3>{product.name}</h3>

@@ -1,6 +1,5 @@
 import { useParams } from 'react-router'
 import { getFirestore } from '../../../firabase/indexFirebase'
-import { RelatedProducts } from './relatedItems/RelatedProducts'
 import { ItemDetail } from './ItemDetail'
 import { useState, useEffect } from 'react'
 
@@ -30,9 +29,6 @@ export const ItemDetailContainer = () => {
       <ItemDetail 
         props={product}
       />      
-      <RelatedProducts
-        props={product?.category}
-      />
     </main>
   )
 }
