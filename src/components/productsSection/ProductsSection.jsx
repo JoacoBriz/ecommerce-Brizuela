@@ -8,24 +8,22 @@ export const ProductsSection = () => {
   const {category} = useParams()
   const [products, setProducts] = useState([])
 
-useEffect(
-  () => {
-    const getData = () => {
-      const db = getFirestore()
-      const itemCollection = db.collection('products')
+  useEffect(
+    () => {
+      const getData = () => {
+        const db = getFirestore()
+        const itemCollection = db.collection('products')
 
-      if(category){
-        const itemCategory = itemCollection.where('category', '==', category)
-        itemCategory.get().then(querySnapshot => {
-          const itemsFiltered = querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id}))
-          setProducts(itemsFiltered)
-        })
+        if(category){
+          const itemCategory = itemCollection.where('category', '==', category)
+          itemCategory.get().then(querySnapshot => {
+            const itemsFiltered = querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id}))
+            setProducts(itemsFiltered)
+          })
+        }
       }
-    }
-    getData()
-    console.log('clothes section => ', products)
-    //eslint-disable-next-line
-}, [category])
+      getData()
+  }, [category])
 
   return(
     <main className='clothesPage'>

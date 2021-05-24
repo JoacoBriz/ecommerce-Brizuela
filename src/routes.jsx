@@ -11,6 +11,7 @@ import { NavBar } from './components/navbar/NavBar';
 import { Newsletter } from './components/newsletter/Newsletter';
 import { ShoppingCart } from './context/CartContext'
 import { ProductsSection } from './components/productsSection/ProductsSection'
+import { Checkout } from './components/cart/checkout/Checkout'
 
 export const Routes = () => {
   return(
@@ -41,6 +42,10 @@ export const Routes = () => {
 
         <Route path='/ProductsSection/:category'>
           <ProductsSection />
+        </Route>
+
+        <Route path='/Checkout'>
+          <Checkout />
         </Route>
 
       </Switch>

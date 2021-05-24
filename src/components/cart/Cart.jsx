@@ -35,6 +35,7 @@ export const Cart = () => {
         <div className='infoContainer'>
           <button onClick={clearCart} className="btnClear">Clean Cart</button>
           <p className='finalPrice'>Total price: $ {sumTotal(cart)}</p>
+          <Link className="btnClear" to='/Checkout'>Go to Checkout</Link>
         </div>
         ) : (<p></p>)}
   </main>
