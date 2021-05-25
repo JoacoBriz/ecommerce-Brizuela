@@ -28,27 +28,25 @@ export const Checkout = () => {
     })
   }
 
-  //Todavia no me salio actualizar el stock 😅
+  const updateStock = () => {
+    const db = getFirestore()
+    const batch = db.batch()
 
-  // const updateStock = () => {
-  //   const db = getFirestore()
-  //   const batch = db.batch()
-
-  //   cart.forEach((product) => {
-  //     const productRef = db.collection('products').doc(product)
-  //     batch.update(productRef, {stock: product.stock - product.quantity})
-  //   })
-  //   batch.commit()
-  // }
+    cart.forEach((product) => {
+      const productRef = db.collection('products').doc(product.id)
+      batch.update(productRef, {stock: product.stock - product.quantity})
+    })
+    batch.commit()
+  }
 
   const buyOrder = () => {
-    // updateStock()
+    updateStock()
     clearCart()
     const db = getFirestore()
     const orders = db.collection('orders')
     const newOrder = {
       buyer: dataBuyer,
-      products: cart,
+      products: cart.map(product => ( {id: product.id, name: product.name, price: product.price} )),
       totalPrice: sumTotal(cart)
     }
     orders.add(newOrder)
