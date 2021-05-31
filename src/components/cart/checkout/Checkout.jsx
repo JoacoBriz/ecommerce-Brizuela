@@ -1,5 +1,5 @@
 import './checkoutStyles.css'
-import { useState, useContext, Fragment } from 'react'
+import { useState, useEffect, useContext, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { getFirestore } from '../../../firabase/indexFirebase'
 import { CartContext } from '../../../context/CartContext'
@@ -7,12 +7,7 @@ import { CartContext } from '../../../context/CartContext'
 export const Checkout = () => {
   const {cart, clearCart} = useContext(CartContext)
   const [cartEmpty, setCartEmpty] = useState(false)
-
-  const sumTotal = cart => {
-    let total = cart.reduce((t, product) => t += product.price*product.quantity, 0).toFixed(2)
-    return total
-  }
-
+  const [isDisabled, setIsDisabled] = useState(true)
   const [dataBuyer, setDataBuyer] = useState(
     {
       name: '',
@@ -20,6 +15,16 @@ export const Checkout = () => {
       phone: ''
     }
   )
+
+  useEffect(() => {
+    const newDisableButton = [dataBuyer.name, dataBuyer.phone, dataBuyer.email].includes('')
+    setIsDisabled(newDisableButton)
+  }, [dataBuyer])
+  
+  const sumTotal = cart => {
+    let total = cart.reduce((t, product) => t += product.price*product.quantity, 0).toFixed(2)
+    return total
+  }
 
   const handleChange = e => {
     setDataBuyer({
@@ -46,7 +51,7 @@ export const Checkout = () => {
     const orders = db.collection('orders')
     const newOrder = {
       buyer: dataBuyer,
-      products: cart.map(product => ( {id: product.id, name: product.name, price: product.price} )),
+      products: cart.map(product => ( {id: product.id, name: product.name, price: product.price * product.quantity} )),
       totalPrice: sumTotal(cart)
     }
     orders.add(newOrder)
@@ -56,20 +61,19 @@ export const Checkout = () => {
 
   return(
     <main className='checkoutMain'>
-    {cartEmpty ? (
-      <Link className='finishBuy' to='/ProductsSection'>Back to Shop</Link>
-    ) : (
-      <Fragment>
-      <h1 className='checkoutTitle'>CheckOut</h1>
-      <form className='checkout'>
-        <input onChange={handleChange} value={dataBuyer.name} name='name' type="text" placeholder='Name' />
-        <input onChange={handleChange} value={dataBuyer.email} name='email' type="text" placeholder='Email' />
-        <input onChange={handleChange} value={dataBuyer.phone} name='phone' type="text" placeholder='Phone' />
-      </form>
-      <button onClick={buyOrder} className='finishBuy'>Finish Buy</button>
-      </Fragment>
-    )}
-
+      {cartEmpty ? (
+        <Link className='finishBuy' to='/ProductsSection/clothes'>Back to Shop</Link>
+      ) : (
+        <Fragment>
+        <h1 className='checkoutTitle'>CheckOut</h1>
+        <form className='checkout'>
+          <input onChange={handleChange} value={dataBuyer.name} name='name' type="text" placeholder='Name' />
+          <input onChange={handleChange} value={dataBuyer.email} name='email' type="text" placeholder='Email' />
+          <input onChange={handleChange} value={dataBuyer.phone} name='phone' type="text" placeholder='Phone' />
+        </form>
+        <button disabled={isDisabled} onClick={buyOrder} className='finishBuy'>Finish Buy</button>
+        </Fragment>
+      )}
     </main>
   )
 }
