@@ -62,7 +62,7 @@ export const Checkout = () => {
   return(
     <main className='checkoutMain'>
       {cartEmpty ? (
-        <Link className='finishBuy' to='/ProductsSection/clothes'>Back to Shop</Link>
+        <Link className='finishBuy' to='/'>Back to Home</Link>
       ) : (
         <Fragment>
         <h1 className='checkoutTitle'>CheckOut</h1>

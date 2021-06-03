@@ -28,7 +28,7 @@ export const Cart = () => {
       ) : (
         <Fragment>
           <p className='cleanCart'>There are no products in your cart</p>
-          <Link className='backToShop' to='/ClothesSection/clothes'>Back to Shop</Link>
+          <Link className='backToShop' to='/ProductsSection/clothes'>Back to Shop</Link>
         </Fragment>
       )}
       {cart.length > 0 ? (
