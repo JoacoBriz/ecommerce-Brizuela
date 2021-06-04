@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Presentación del Proyecto Final de React.js
 
-Este proyecto lo cree con React para el curso de React en Coder House.
+Este proyecto lo cree con React para el curso de React en Coder House. Es un e-commerce de ropa "Hypebeast".
 
 ## Available Scripts
 
