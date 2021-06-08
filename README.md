@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Presentación del Proyecto Final de React.js
 
-Este proyecto lo cree con React para el curso de React en Coder House.
+Este proyecto lo cree con React para el curso de React en Coder House. Es un e-commerce de ropa "Hypebeast".
+Hay 5 secciones que son el home, clothes, sneakers, About y cart.
+Dentro de cada Producto, se encontrará el producto, con su precio unitario, elección de cantidad y los productos relacionados.
+
 
 ## Available Scripts
 
