@@ -3,9 +3,9 @@ import './RelatedProdutsStyles.css'
 
 export const RelatedProducts = ({ props }) => {
   return(
-    <ul className='productList'>
+    <ul className='productsRelated'>
     {props.map((product) => 
-        <li className='product'>
+        <li className='productRelated'>
           <img src={product.image} alt=''></img>
           <h3>{product.name}</h3>
           <p>{`$ ${product.price}`}</p>

@@ -3,7 +3,7 @@ import { ItemCount } from './increment/ItemCount'
 import { useState, useContext } from 'react';
 import { CartContext } from '../../../context/CartContext';
 
-export const ItemDetail = ({ props }) => {
+export const ItemDetail = ({ props, name, image, price }) => {
   const [quantity, setQuantity] = useState(0)
   const [buttonBuy, setButtonbuy] = useState(false)
   const { addToCart } =  useContext(CartContext)
@@ -30,10 +30,10 @@ export const ItemDetail = ({ props }) => {
   return(
     <>
     <div className='productSigle'>
-    <img className='productImage' src={props.image} alt=''></img>
+    <img className='productImage' src={image} alt=''></img>
       <div className='productInfo'>
-      <h1 className='productName'>{props.name}</h1>
-      <p className='productPrice'>$ {props.price}</p>
+      <h1 className='productName'>{name}</h1>
+      <p className='productPrice'>$ {price}</p>
       {buttonBuy === false ? (
       <ItemCount 
         count={quantity}

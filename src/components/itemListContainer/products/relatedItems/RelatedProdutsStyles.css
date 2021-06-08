@@ -1,14 +1,14 @@
-.productList{
+.productsRelated{
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
-  width: 10%;
+  width: 100%;
   padding: 0px;
 }
 
-.product{
+.productRelated{
   border: 3px solid #000;
   border-radius: 2px;
   list-style: none;
@@ -19,24 +19,24 @@
   background-color: #fff;
 }
 
-.product:hover{
+.productRelated:hover{
   transition: 1s ease;
   border-color: #ff6347;
 }
 
 
 
-.product img{
+.productRelated img{
   width: 200px;
   height: 250px;
 }
 
-.product h3{
+.productRelated h3{
   font-weight: 800;
   margin-bottom: 0px;
 }
 
-.product p{
+.productRelated p{
   text-align: center;
   font-weight: 600;
   font-size: 25px;
@@ -51,7 +51,7 @@
   border-radius: 2px;
   font-size: 20px;
   padding: 5px 25px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   transition: 0.5s ease;
   text-decoration: none;
 }

@@ -65,13 +65,13 @@ export const Checkout = () => {
         <Link className='finishBuy' to='/'>Back to Home</Link>
       ) : (
         <Fragment>
-        <h1 className='checkoutTitle'>CheckOut</h1>
-        <form className='checkout'>
-          <input onChange={handleChange} value={dataBuyer.name} name='name' type="text" placeholder='Name' />
-          <input onChange={handleChange} value={dataBuyer.email} name='email' type="text" placeholder='Email' />
-          <input onChange={handleChange} value={dataBuyer.phone} name='phone' type="text" placeholder='Phone' />
-        </form>
-        <button disabled={isDisabled} onClick={buyOrder} className='finishBuy'>Finish Buy</button>
+          <h1 className='checkoutTitle'>CheckOut</h1>
+          <form className='checkout'>
+            <input onChange={handleChange} value={dataBuyer.name} name='name' type="text" placeholder='Name' />
+            <input onChange={handleChange} value={dataBuyer.email} name='email' type="text" placeholder='Email' />
+            <input onChange={handleChange} value={dataBuyer.phone} name='phone' type="text" placeholder='Phone' />
+          </form>
+          <button type="submit" disabled={isDisabled} onClick={buyOrder} className='finishBuy'>Finish Buy</button>
         </Fragment>
       )}
     </main>
