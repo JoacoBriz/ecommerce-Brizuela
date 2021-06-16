@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
 import { getFirestore } from '../../firabase/indexFirebase'
-import './productsStyles.css'
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router'
+import { useState, useEffect } from 'react'
+import styles from './product.module.scss'
 
 export const ProductsSection = () => {
   const {category} = useParams()
@@ -26,14 +26,14 @@ export const ProductsSection = () => {
   }, [category])
 
   return(
-    <main className='clothesPage'>
-      <ul className='productList'>
+    <main className={styles.products}>
+      <ul className={styles.list}>
       {products.map((product) =>
-        <li className='product'>
+        <li className={styles.product}>
           <img src={product.image} alt=''></img>
           <h3>{product.name}</h3>
           <p>{`$ ${product.price}`}</p>
-          <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>View More</Link>
+          <Link className={styles.btnBuy} to={`/ItemDetailContainer/${product.id}`}>View More</Link>
         </li>
       )}
       </ul>

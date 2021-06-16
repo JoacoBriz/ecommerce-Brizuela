@@ -1,7 +1,7 @@
-import './itemListStyles.css'
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { getFirestore } from '../../firabase/indexFirebase'
+import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import styles from './itemList.module.scss'
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([])
@@ -16,18 +16,18 @@ export const ItemListContainer = () => {
   }, [])
 
   return(
-    <div className='productsContainer'>
-      <div className='newCategory'>
-        <h2 className='newTitle'>New Releases</h2>
-        <p className='newDescription'>Collaborations and <span>exclusive</span> pieces</p>
+    <div className={styles.products}>
+      <div className={styles.category}>
+        <h2 className={styles.title}>New Releases</h2>
+        <p className={styles.description} >Collaborations and <span>exclusive</span> pieces</p>
       </div>
-      <ul className='productList'>
+      <ul className={styles.list}>
       {products.map((product) => 
-          <li className='product'>
+          <li className={styles.product} >
           <img src={product.image} alt=''></img>
             <h3>{product.name}</h3>
             <p>{`$ ${product.price}`}</p>
-            <Link className='buttonBuy' to={`/ItemDetailContainer/${product.id}`}>View More</Link>
+            <Link className={styles.btnBuy} to={`/ItemDetailContainer/${product.id}`}>View More</Link>
           </li>
       )}
     </ul>

@@ -1,0 +1,43 @@
+@import './fonts';
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+  background-color: #ffff;
+	font-family: $font-family-primary;
+	overscroll-behavior: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+input {
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	background: transparent;
+	border: 0;
+	outline: 0;
+}

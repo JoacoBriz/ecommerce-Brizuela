@@ -1,17 +1,17 @@
-import './footerStyles.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import styles from './footer.module.scss'
 
 export const Footer = () => {
   return(
-    <section className='footerContainer'>
-    <div className='legalData'>
+    <section className={styles.footer}>
+    <div className={styles.legal}>
       <h3>The best store of Hypebeast</h3>
       <p>CLYDE © 2021</p>
     </div>
-    <ul className='socialMediaLinks'>
+    <ul className={styles.links}>
       <li>
         <FontAwesomeIcon icon={faInstagram}/>
       </li>

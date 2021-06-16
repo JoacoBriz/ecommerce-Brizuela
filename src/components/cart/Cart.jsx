@@ -1,7 +1,7 @@
-import './cartStyles.css'
 import { CartContext } from '../../context/CartContext'
-import { Fragment, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import styles from './cart.module.scss'
 
 export const Cart = () => {
   const {cart, clearCart, removeFromCart} = useContext(CartContext)
@@ -12,30 +12,30 @@ export const Cart = () => {
 }
 
   return(
-    <main className='cart'>
+    <main className={styles.cart}>
       {cart.length > 0 ? (
         cart.map ((product) =>
-            <div className='cartProduct'>
-              <img className='cartImage' src={product.image} alt=""/>
-              <div className='cartInformation'>
-                <h2 className='cartName'>{product.name}</h2>
-                <p className='cartPrice'>${product.price*product.quantity}</p>
-                <p className='cartPrice'>Quantity: {product.quantity}</p>
-                <button className='btnRemove' onClick={() => removeFromCart(product.id)}>Delete</button>
+            <div className={styles.product}>
+              <img className={styles.image} src={product.image} alt=""/>
+              <div className={styles.info}>
+                <h2 className={styles.name}>{product.name}</h2>
+                <p className={styles.price}>${product.price*product.quantity}</p>
+                <p className={styles.quantity}>Quantity: {product.quantity}</p>
+                <button className={styles.btnRemove} onClick={() => removeFromCart(product.id)}>Delete</button>
               </div>
             </div>
         )
       ) : (
-        <Fragment>
-          <p className='cleanCart'>There are no products in your cart</p>
-          <Link className='backToShop' to='/ProductsSection/clothes'>Back to Shop</Link>
-        </Fragment>
+        <div className={styles.cleanCart}>
+          <p className={styles.title}>There are no products in your cart</p>
+          <Link className={styles.backToShop} to='/ProductsSection/clothes'>Back to Shop</Link>
+        </div>
       )}
       {cart.length > 0 ? (
-        <div className='infoContainer'>
-          <button onClick={clearCart} className="btnClear">Clean Cart</button>
-          <p className='finalPrice'>Total price: $ {sumTotal(cart)}</p>
-          <Link className="btnClear" to='/Checkout'>Go to Checkout</Link>
+        <div className={styles.infoCart}>
+          <button onClick={clearCart} className={styles.btnClear}>Clean Cart</button>
+          <p className={styles.finalPrice}>Total price: $ {sumTotal(cart)}</p>
+          <Link className={styles.btnClear} to='/Checkout'>Go to Checkout</Link>
         </div>
         ) : (<p></p>)}
   </main>

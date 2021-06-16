@@ -1,0 +1,46 @@
+@import '../../sass/global.scss';
+
+.slider{
+  position: relative;
+  height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    margin: 0;
+    width: 70vw;
+    height: 44vw;
+    border-radius: 1px;
+    top: 450px;
+    right: 15%;
+    border: 5px solid #fff;
+  }
+
+  .leftArrow{
+    position: absolute;
+    top: 100vh;
+    left: 5vw;
+    font-size: 4rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .rightArrow{
+    position: absolute;
+    top: 100vh;
+    right: 5vw;
+    font-size: 4rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+}

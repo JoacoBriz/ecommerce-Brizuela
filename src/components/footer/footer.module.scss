@@ -1,0 +1,29 @@
+@import '../../sass/global.scss';
+
+.footer{
+  background-color: $color-primary;
+  color: $color-tertiary;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 15vh;
+  bottom: 0;
+
+  .legal{
+    font-family: $font-family-primary;
+    font-size: 20px;
+  }
+
+  .links{
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    color: $color-tertiary;
+  }
+  .links li{
+    font-size: 35px;
+    margin: 0px 10px;
+  }
+}

@@ -1,6 +1,7 @@
-import './navBar.css'
-import { NavLink } from 'react-router-dom';
+
+import styles from './navbar.module.scss'
 import { CartContext } from '../../context/CartContext';
+import { NavLink } from 'react-router-dom';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
 import {useContext} from 'react'
@@ -10,25 +11,25 @@ export const NavBar = () => {
   const { quantity } = useContext (CartContext)
 
   return(
-    <div className="navBar">
-      <NavLink className="nameShop" exact to='/'>CLYDE</NavLink>
-      <ul className="navBarPages">
+    <div className={styles.navbar}>
+      <NavLink className={styles.nameShop} exact to='/'>CLYDE</NavLink>
+      <ul className={styles.navBarPages}>
         <li>
-          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/'>Home</NavLink>
+          <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} exact to='/'>Home</NavLink>
         </li>
         <li>
-          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/ProductsSection/clothes'>Clothes</NavLink>
+          <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} exact to='/ProductsSection/clothes'>Clothes</NavLink>
         </li>
         <li> 
-          <NavLink activeClassName='activeNavlink' className='navLink' exact to='/ProductsSection/sneakers'>Sneakers</NavLink>
+          <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} exact to='/ProductsSection/sneakers'>Sneakers</NavLink>
         </li>
         <li>
-          <NavLink activeClassName='activeNavlink' className='navLink' to='/MainAbout'>About</NavLink>
+          <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} to='/MainAbout'>About</NavLink>
         </li>
         <li>
-        <NavLink activeClassName='activeNavlink' className='navLink' to='/Cart'>
-          <FontAwesomeIcon icon={faShoppingCart} className='cartIcon'/>
-          <p className="cartQuantityAll"><span>{quantity}</span></p>
+        <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} to='/Cart'>
+          <FontAwesomeIcon icon={faShoppingCart} className={styles.cartIcon} />
+          <p className={styles.cartQuantityAll}><span>{quantity}</span></p>
         </NavLink>
         </li>
       </ul>

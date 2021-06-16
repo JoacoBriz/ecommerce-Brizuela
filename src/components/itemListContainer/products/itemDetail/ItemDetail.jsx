@@ -1,7 +1,7 @@
-import './ItemDetailStyles.css'
-import { ItemCount } from './increment/ItemCount'
+import styles from './itemDetail.module.scss'
+import { CartContext } from '../../../../context/CartContext';
+import { ItemCount } from '../increment/ItemCount'
 import { useState, useContext } from 'react';
-import { CartContext } from '../../../context/CartContext';
 
 export const ItemDetail = ({ props, name, image, price }) => {
   const [quantity, setQuantity] = useState(0)
@@ -29,11 +29,11 @@ export const ItemDetail = ({ props, name, image, price }) => {
 
   return(
     <>
-    <div className='productSigle'>
-    <img className='productImage' src={image} alt=''></img>
-      <div className='productInfo'>
-      <h1 className='productName'>{name}</h1>
-      <p className='productPrice'>$ {price}</p>
+    <div className={styles.product}>
+    <img className={styles.image} src={image} alt=''></img>
+      <div className={styles.info}>
+      <h1 className={styles.name}>{name}</h1>
+      <p className={styles.price}>$ {price}</p>
       {buttonBuy === false ? (
       <ItemCount 
         count={quantity}
@@ -42,13 +42,13 @@ export const ItemDetail = ({ props, name, image, price }) => {
         selectQuantity={selectQuantity}
       />
       ) : (
-        <button className='addCart' onClick={() => addToCart(props, quantity)} >Finish Buy</button>
+        <button className={styles.addToCart} onClick={() => addToCart(props, quantity)} >Finish Buy</button>
       )
       }
       </div>
     </div>
-    <div className='newCategory'>
-      <h2 className='newTitle'>Related Products</h2>
+    <div className={styles.category}>
+      <h2 className={styles.title}>Related Products</h2>
     </div>
     </>
   )

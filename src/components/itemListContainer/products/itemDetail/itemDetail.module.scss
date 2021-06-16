@@ -1,0 +1,71 @@
+@import '../../../../sass/global.scss';
+
+.product{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .image{
+    margin: 100px 60px;
+    width: 600px;
+    height: 800px;
+  }
+
+  .info{
+    width: 50%;
+    background-color: $color-tertiary;
+    margin: 100px 50px;
+    padding: 0px 50px;
+    box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+
+    .name{
+      font-size: 3vw;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    .price{
+      text-align: left;
+      font-size: 40px;
+      font-weight: 600;
+      margin: 0px;
+      margin-bottom: 5px;
+    }
+
+    .addToCart{
+      font-weight: 600;
+      background-color: $color-tertiary;
+      color: $color-primary;
+      border: 2px solid $color-primary;
+      border-radius: 2px;
+      font-size: 20px;
+      padding: 5px 25px;
+      margin-bottom: 10px;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .addToCart:hover{
+      background-color: $color-secondary;
+      color: $color-tertiary;
+    }
+  }
+}
+
+.category{
+  text-align: center;
+  background-color: $color-primary;
+  color: $color-tertiary;
+  padding: 30px 0px;
+  margin-bottom: 40px;
+  
+  
+  .title{
+    font-size: 4vw;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin: 0px;
+    top: 0px;
+  }
+}

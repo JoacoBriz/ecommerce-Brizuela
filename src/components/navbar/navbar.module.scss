@@ -1,0 +1,67 @@
+@import '../../sass/global.scss';
+
+.navbar{
+  background-color: $color-primary;
+  color: #fff;
+  display: flex;
+  font-family: $font-family-primary;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: space-between;
+  letter-spacing: 1.5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  padding-bottom: 10px;
+
+  .nameShop{
+    color: #fff;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    margin-top: 17px;
+    padding: 0px 10px;
+    text-decoration: italic;
+    text-decoration: none;
+  }
+
+  .navBarPages{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 10px;
+    margin-top: 17px;
+
+    .navlink{
+      color: #fff;
+      text-decoration: none;
+      top: 300px;
+    }
+
+    .activeNavlink{
+      color: $color-secondary;
+    }
+
+    .cartIcon{
+      color: #fff;
+      font-size: 25px;
+      }
+
+    .cartQuantityAll{
+      color: $color-primary;
+      font-size: 15px;
+      font-weight: 900;
+      margin-left: 0%;
+      margin-top: 1px;
+      position: absolute;
+      right: 31px;
+      top: 15.1px;
+      z-index: 200;
+    }
+  }
+
+  .navBarPages li{
+    margin: 0px 15px;
+  }
+}

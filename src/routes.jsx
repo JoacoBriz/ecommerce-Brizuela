@@ -1,17 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Carousel } from './components/carousel/Carousel';
-import { CarouselSlider } from './components/carousel/CarouselSlider';
 import { Cart } from './components/cart/Cart'
+import { Checkout } from './components/cart/checkout/Checkout'
 import { Footer } from './components/footer/Footer';
 import { ItemDetailContainer } from './components/itemListContainer/products/ItemDetailContainer'
-import { ItemListContainer } from './components/itemListContainer/ItemListContainer';
-import { MainAbout } from './components/aboutPage/MainAbout'
-import { MainIndex } from './components/main/MainIndex';
+import { MainAbout } from './pages/about/MainAbout'
+import { MainIndex } from './pages/main/MainIndex';
 import { NavBar } from './components/navbar/NavBar';
 import { Newsletter } from './components/newsletter/Newsletter';
+import { ProductsSection } from './pages/productSection/ProductsSection'
 import { ShoppingCart } from './context/CartContext'
-import { ProductsSection } from './components/productsSection/ProductsSection'
-import { Checkout } from './components/cart/checkout/Checkout'
 
 export const Routes = () => {
   return(
@@ -22,9 +19,6 @@ export const Routes = () => {
 
         <Route exact path='/'>
           <MainIndex />
-          <CarouselSlider slides={Carousel}/>
-          <ItemListContainer />
-          <Newsletter />
         </Route>
 
         <Route path='/Cart'>

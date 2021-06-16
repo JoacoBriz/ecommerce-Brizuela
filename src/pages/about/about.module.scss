@@ -1,0 +1,62 @@
+@import '../../sass/global.scss';
+
+section{
+  font-family: $font-family-primary;
+  .title{
+    letter-spacing: 4px;
+    font-size: 60px;
+    text-align: center;
+    margin: 100px 0px 25px 0px;
+  }
+
+  .description{
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+
+  .aboutUs{
+    border-radius: 3px;
+    box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, .2);
+    width: 70%;
+    margin: auto;
+    background-color: $color-tertiary;
+    
+    .subtitle{
+      position: relative;
+      font-size: 60px;
+      text-align: center;
+      bottom: 45px;
+      margin-bottom: 0px;
+      letter-spacing: 4px;
+    }
+  
+    .gallery{
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+  
+    .card{
+      margin: 20px 15px;
+      font-weight: 600;
+    }
+  
+    .card img{
+      box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, .2);
+      border-radius: 3px;
+      width: 280px;
+      height: 180px;
+    }
+    
+    
+    .card:hover{
+      font-weight: 100;
+    }
+  }
+}
