@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/clyde/static/css/main.3de02702.chunk.css",
-    "main.js": "/clyde/static/js/main.e58f732e.chunk.js",
-    "main.js.map": "/clyde/static/js/main.e58f732e.chunk.js.map",
-    "runtime-main.js": "/clyde/static/js/runtime-main.eea325c4.js",
-    "runtime-main.js.map": "/clyde/static/js/runtime-main.eea325c4.js.map",
-    "static/js/2.32b68b91.chunk.js": "/clyde/static/js/2.32b68b91.chunk.js",
-    "static/js/2.32b68b91.chunk.js.map": "/clyde/static/js/2.32b68b91.chunk.js.map",
-    "index.html": "/clyde/index.html",
-    "static/css/main.3de02702.chunk.css.map": "/clyde/static/css/main.3de02702.chunk.css.map",
-    "static/js/2.32b68b91.chunk.js.LICENSE.txt": "/clyde/static/js/2.32b68b91.chunk.js.LICENSE.txt",
-    "static/media/LouisVuitton.990a0761.jpg": "/clyde/static/media/LouisVuitton.990a0761.jpg",
-    "static/media/dior.c25f1b60.png": "/clyde/static/media/dior.c25f1b60.png",
-    "static/media/giorgio.8c35febe.jpeg": "/clyde/static/media/giorgio.8c35febe.jpeg",
-    "static/media/gucci.5f945350.jpg": "/clyde/static/media/gucci.5f945350.jpg",
-    "static/media/prada.1cc3772f.jpg": "/clyde/static/media/prada.1cc3772f.jpg",
-    "static/media/versace.bf7e32cc.jpeg": "/clyde/static/media/versace.bf7e32cc.jpeg"
+    "main.css": "/ecommerce-brizuela/static/css/main.3de02702.chunk.css",
+    "main.js": "/ecommerce-brizuela/static/js/main.e58f732e.chunk.js",
+    "main.js.map": "/ecommerce-brizuela/static/js/main.e58f732e.chunk.js.map",
+    "runtime-main.js": "/ecommerce-brizuela/static/js/runtime-main.8ab7a9ce.js",
+    "runtime-main.js.map": "/ecommerce-brizuela/static/js/runtime-main.8ab7a9ce.js.map",
+    "static/js/2.e80c3e3c.chunk.js": "/ecommerce-brizuela/static/js/2.e80c3e3c.chunk.js",
+    "static/js/2.e80c3e3c.chunk.js.map": "/ecommerce-brizuela/static/js/2.e80c3e3c.chunk.js.map",
+    "index.html": "/ecommerce-brizuela/index.html",
+    "static/css/main.3de02702.chunk.css.map": "/ecommerce-brizuela/static/css/main.3de02702.chunk.css.map",
+    "static/js/2.e80c3e3c.chunk.js.LICENSE.txt": "/ecommerce-brizuela/static/js/2.e80c3e3c.chunk.js.LICENSE.txt",
+    "static/media/LouisVuitton.990a0761.jpg": "/ecommerce-brizuela/static/media/LouisVuitton.990a0761.jpg",
+    "static/media/dior.c25f1b60.png": "/ecommerce-brizuela/static/media/dior.c25f1b60.png",
+    "static/media/giorgio.8c35febe.jpeg": "/ecommerce-brizuela/static/media/giorgio.8c35febe.jpeg",
+    "static/media/gucci.5f945350.jpg": "/ecommerce-brizuela/static/media/gucci.5f945350.jpg",
+    "static/media/prada.1cc3772f.jpg": "/ecommerce-brizuela/static/media/prada.1cc3772f.jpg",
+    "static/media/versace.bf7e32cc.jpeg": "/ecommerce-brizuela/static/media/versace.bf7e32cc.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eea325c4.js",
-    "static/js/2.32b68b91.chunk.js",
+    "static/js/runtime-main.8ab7a9ce.js",
+    "static/js/2.e80c3e3c.chunk.js",
     "static/css/main.3de02702.chunk.css",
     "static/js/main.e58f732e.chunk.js"
   ]
