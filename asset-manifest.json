@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/ecommerce-clyde/MainIndex/static/css/main.cfb112e0.chunk.css",
-    "main.js": "/ecommerce-clyde/MainIndex/static/js/main.1e2aba0f.chunk.js",
-    "main.js.map": "/ecommerce-clyde/MainIndex/static/js/main.1e2aba0f.chunk.js.map",
-    "runtime-main.js": "/ecommerce-clyde/MainIndex/static/js/runtime-main.b750ad68.js",
-    "runtime-main.js.map": "/ecommerce-clyde/MainIndex/static/js/runtime-main.b750ad68.js.map",
-    "static/js/2.2eb66f55.chunk.js": "/ecommerce-clyde/MainIndex/static/js/2.2eb66f55.chunk.js",
-    "static/js/2.2eb66f55.chunk.js.map": "/ecommerce-clyde/MainIndex/static/js/2.2eb66f55.chunk.js.map",
-    "index.html": "/ecommerce-clyde/MainIndex/index.html",
-    "static/css/main.cfb112e0.chunk.css.map": "/ecommerce-clyde/MainIndex/static/css/main.cfb112e0.chunk.css.map",
-    "static/js/2.2eb66f55.chunk.js.LICENSE.txt": "/ecommerce-clyde/MainIndex/static/js/2.2eb66f55.chunk.js.LICENSE.txt",
-    "static/media/LouisVuitton.990a0761.jpg": "/ecommerce-clyde/MainIndex/static/media/LouisVuitton.990a0761.jpg",
-    "static/media/dior.c25f1b60.png": "/ecommerce-clyde/MainIndex/static/media/dior.c25f1b60.png",
-    "static/media/giorgio.8c35febe.jpeg": "/ecommerce-clyde/MainIndex/static/media/giorgio.8c35febe.jpeg",
-    "static/media/gucci.5f945350.jpg": "/ecommerce-clyde/MainIndex/static/media/gucci.5f945350.jpg",
-    "static/media/prada.1cc3772f.jpg": "/ecommerce-clyde/MainIndex/static/media/prada.1cc3772f.jpg",
-    "static/media/versace.bf7e32cc.jpeg": "/ecommerce-clyde/MainIndex/static/media/versace.bf7e32cc.jpeg"
+    "main.css": "/ecommerce-clyde/MainIndex%C3%91/static/css/main.cfb112e0.chunk.css",
+    "main.js": "/ecommerce-clyde/MainIndex%C3%91/static/js/main.1e2aba0f.chunk.js",
+    "main.js.map": "/ecommerce-clyde/MainIndex%C3%91/static/js/main.1e2aba0f.chunk.js.map",
+    "runtime-main.js": "/ecommerce-clyde/MainIndex%C3%91/static/js/runtime-main.18cd7887.js",
+    "runtime-main.js.map": "/ecommerce-clyde/MainIndex%C3%91/static/js/runtime-main.18cd7887.js.map",
+    "static/js/2.c7b3f539.chunk.js": "/ecommerce-clyde/MainIndex%C3%91/static/js/2.c7b3f539.chunk.js",
+    "static/js/2.c7b3f539.chunk.js.map": "/ecommerce-clyde/MainIndex%C3%91/static/js/2.c7b3f539.chunk.js.map",
+    "index.html": "/ecommerce-clyde/MainIndex%C3%91/index.html",
+    "static/css/main.cfb112e0.chunk.css.map": "/ecommerce-clyde/MainIndex%C3%91/static/css/main.cfb112e0.chunk.css.map",
+    "static/js/2.c7b3f539.chunk.js.LICENSE.txt": "/ecommerce-clyde/MainIndex%C3%91/static/js/2.c7b3f539.chunk.js.LICENSE.txt",
+    "static/media/LouisVuitton.990a0761.jpg": "/ecommerce-clyde/MainIndex%C3%91/static/media/LouisVuitton.990a0761.jpg",
+    "static/media/dior.c25f1b60.png": "/ecommerce-clyde/MainIndex%C3%91/static/media/dior.c25f1b60.png",
+    "static/media/giorgio.8c35febe.jpeg": "/ecommerce-clyde/MainIndex%C3%91/static/media/giorgio.8c35febe.jpeg",
+    "static/media/gucci.5f945350.jpg": "/ecommerce-clyde/MainIndex%C3%91/static/media/gucci.5f945350.jpg",
+    "static/media/prada.1cc3772f.jpg": "/ecommerce-clyde/MainIndex%C3%91/static/media/prada.1cc3772f.jpg",
+    "static/media/versace.bf7e32cc.jpeg": "/ecommerce-clyde/MainIndex%C3%91/static/media/versace.bf7e32cc.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b750ad68.js",
-    "static/js/2.2eb66f55.chunk.js",
+    "static/js/runtime-main.18cd7887.js",
+    "static/js/2.c7b3f539.chunk.js",
     "static/css/main.cfb112e0.chunk.css",
     "static/js/main.1e2aba0f.chunk.js"
   ]
