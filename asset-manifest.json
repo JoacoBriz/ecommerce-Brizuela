@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ecommerce-clyde/static/css/main.cfb112e0.chunk.css",
-    "main.js": "/ecommerce-clyde/static/js/main.1e2aba0f.chunk.js",
-    "main.js.map": "/ecommerce-clyde/static/js/main.1e2aba0f.chunk.js.map",
+    "main.js": "/ecommerce-clyde/static/js/main.1462e8f4.chunk.js",
+    "main.js.map": "/ecommerce-clyde/static/js/main.1462e8f4.chunk.js.map",
     "runtime-main.js": "/ecommerce-clyde/static/js/runtime-main.2449f4ae.js",
     "runtime-main.js.map": "/ecommerce-clyde/static/js/runtime-main.2449f4ae.js.map",
     "static/js/2.3039f7a0.chunk.js": "/ecommerce-clyde/static/js/2.3039f7a0.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.2449f4ae.js",
     "static/js/2.3039f7a0.chunk.js",
     "static/css/main.cfb112e0.chunk.css",
-    "static/js/main.1e2aba0f.chunk.js"
+    "static/js/main.1462e8f4.chunk.js"
   ]
 }
