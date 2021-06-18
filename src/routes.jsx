@@ -17,7 +17,7 @@ export const Routes = () => {
       <NavBar />
       <Switch>
 
-        <Route exact path='/MainIndex'>
+        <Route exact path='/ecommerce-clyde'>
           <MainIndex />
         </Route>
 

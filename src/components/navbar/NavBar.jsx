@@ -12,10 +12,10 @@ export const NavBar = () => {
 
   return(
     <div className={styles.navbar}>
-      <NavLink className={styles.nameShop} exact to='/MainIndex'>CLYDE</NavLink>
+      <NavLink className={styles.nameShop} exact to='/ecommerce-clyde'>CLYDE</NavLink>
       <ul className={styles.navBarPages}>
         <li>
-          <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} exact to='/MainIndex'>Home</NavLink>
+          <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} exact to='/ecommerce-clyde'>Home</NavLink>
         </li>
         <li>
           <NavLink activeClassName={styles.activeNavlink} className={styles.navlink} exact to='/ProductsSection/clothes'>Clothes</NavLink>
