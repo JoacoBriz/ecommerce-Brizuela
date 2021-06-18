@@ -17,7 +17,7 @@ export const Routes = () => {
       <NavBar />
       <Switch>
 
-        <Route exact path='/'>
+        <Route exact path='/MainIndex'>
           <MainIndex />
         </Route>
 
